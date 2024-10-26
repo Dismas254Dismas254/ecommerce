@@ -26,7 +26,7 @@
       stars: 4.5,
       count: 87
     },
-    priceCents: 1090,
+    priceCents: 6090,
     keywords: [
       "socks",
       "sports",
@@ -41,7 +41,7 @@
       stars: 4,
       count: 127
     },
-    priceCents: 2095,
+    priceCents: 8095,
     keywords: [
       "sports",
       "basketballs"
@@ -55,7 +55,7 @@
       stars: 4.5,
       count: 56
     },
-    priceCents: 799,
+    priceCents: 6099,
     keywords: [
       "tshirts",
       "apparel",
@@ -72,7 +72,7 @@
       stars: 5,
       count: 2197
     },
-    priceCents: 1899,
+    priceCents: 21899,
     keywords: [
       "toaster",
       "kitchen",
@@ -87,7 +87,7 @@
       stars: 4,
       count: 37
     },
-    priceCents: 2067,
+    priceCents: 6067,
     keywords: [
       "plates",
       "kitchen",
@@ -102,7 +102,7 @@
       stars: 4.5,
       count: 175
     },
-    priceCents: 3499,
+    priceCents: 7099,
     keywords: [
       "kitchen",
       "cookware"
@@ -116,7 +116,7 @@
       stars: 4.5,
       count: 317
     },
-    priceCents: 2400,
+    priceCents: 8400,
     keywords: [
       "hoodies",
       "sweaters",
@@ -131,7 +131,7 @@
       stars: 4.5,
       count: 144
     },
-    priceCents: 3599,
+    priceCents: 7599,
     keywords: [
       "bathroom",
       "washroom",
@@ -148,7 +148,7 @@
       stars: 4.5,
       count: 305
     },
-    priceCents: 2899,
+    priceCents: 5899,
     keywords: [
       "bathroom",
       "cleaning"
@@ -162,7 +162,7 @@
       stars: 4,
       count: 89
     },
-    priceCents: 3390,
+    priceCents: 10390,
     keywords: [
       "shoes",
       "running shoes",
@@ -177,7 +177,7 @@
       stars: 4.5,
       count: 235
     },
-    priceCents: 2070,
+    priceCents: 4070,
     keywords: [
       "robe",
       "swimsuit",
@@ -196,7 +196,7 @@
       stars: 4.5,
       count: 30
     },
-    priceCents: 1560,
+    priceCents: 4560,
     keywords: [
       "accessories",
       "shades"
@@ -210,7 +210,7 @@
       stars: 4.5,
       count: 562
     },
-    priceCents: 2499,
+    priceCents: 6499,
     keywords: [
       "footwear",
       "sandals",
@@ -227,7 +227,7 @@
       stars: 4.5,
       count: 232
     },
-    priceCents: 4599,
+    priceCents: 8599,
     keywords: [
       "bedroom",
       "curtains",
@@ -242,7 +242,7 @@
       stars: 4,
       count: 160
     },
-    priceCents: 1699,
+    priceCents: 6699,
     keywords: [
       "shorts",
       "apparel",
@@ -257,7 +257,7 @@
       stars: 5,
       count: 846
     },
-    priceCents: 3074,
+    priceCents: 10074,
     keywords: [
       "water boiler",
       "appliances",
@@ -272,7 +272,7 @@
       stars: 4,
       count: 99
     },
-    priceCents: 2374,
+    priceCents: 5374,
     keywords: [
       "kleenex",
       "tissues",
@@ -653,7 +653,7 @@
       stars: 4.5,
       count: 1045
     },
-    priceCents: 5799,
+    priceCents: 9799,
     keywords: [
       "kitchen",
       "kitchen towels",
@@ -668,7 +668,7 @@
       stars: 4.5,
       count: 3157
     },
-    priceCents: 2400,
+    priceCents: 9400,
     keywords: [
       "sweaters",
       "hoodies",

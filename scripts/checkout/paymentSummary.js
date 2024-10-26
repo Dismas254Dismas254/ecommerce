@@ -68,6 +68,11 @@ export function renderPaymentSummary(){
             Place your order
           </button>
 
+
+
+
+    <div id="paypal-button-container" class="hidden"></div>
+
     `;
 
     document.querySelector(' .js-payment-summary').innerHTML = paymentSummaryHTML;
