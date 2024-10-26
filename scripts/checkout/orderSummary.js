@@ -146,8 +146,9 @@ let html = '';
                     ${dateString}
                     </div>
                     <div class="delivery-option-price">
-                   ${priceString}  Shipping
-                    </div>
+                  <!-- ${priceString}  Shipping -->  
+                  
+                  </div>
                 </div>
                 </div>
 `

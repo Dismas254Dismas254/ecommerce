@@ -1,157 +1,96 @@
-import{cart, addToCart} from '../data/cart.js';
-import {products} from '../data/products.js';
+import { cart, addToCart } from '../data/cart.js';
+import { products } from '../data/products.js';
 import { formatCurrency } from './utils/money.js';
-
-
-
 
 let productsHTML = '';
 
-
-
-
-products.forEach((product) =>  {
-    productsHTML +=  ` <div class="product-container">
+// Generate product list HTML
+products.forEach((product) => {
+    productsHTML += `
+        <div class="product-container">
             <div class="product-image-container">
-            <img class="product-image"
-                src="${product.image}">
+                <img class="product-image" src="${product.image}">
             </div>
-
             <div class="product-name limit-text-to-2-lines">
-            ${product.name}
+                ${product.name}
             </div>
-
             <div class="product-rating-container">
-            <img class="product-rating-stars"
-                src="images/ratings/rating-${product.rating.stars * 10}.png">
-            <div class="product-rating-count link-primary">
-                ${product.rating.count}
+                <img class="product-rating-stars" src="images/ratings/rating-${product.rating.stars * 10}.png">
+                <div class="product-rating-count link-primary">
+                    ${product.rating.count}
+                </div>
             </div>
-            </div>
-
-            <div class="product-price">$
-            ${(product.priceCents / 100).toFixed(2)}
-            </div>
-
+            <div class="product-price">$${(product.priceCents / 100).toFixed(2)}</div>
             <div class="product-quantity-container">
-            <select  class="js-quantity-selector-${product.id}">
-                <option selected value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-            </select>
+                <select class="js-quantity-selector-${product.id}">
+                    <option selected value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
             </div>
-
             <div class="product-spacer"></div>
-
-            <div class="added-to-cart  js-added-tocart-${product.id}">
-            <img src="images/icons/checkmark.png">
-            Added
+            <div class="added-to-cart js-added-tocart-${product.id}">
+                <img src="images/icons/checkmark.png"> Added
             </div>
-
-            <button class="add-to-cart-button button-primary js-add-to-cart"  data-product-id="${product.id}">
-            Add to Cart
+            <button class="add-to-cart-button button-primary js-add-to-cart" data-product-id="${product.id}">
+                Add to Cart
             </button>
         </div>`;
-
-        
 });
 
+// Display product list in HTML
+document.querySelector('.js-products-grid').innerHTML = productsHTML;
 
-
-
-
-document.querySelector(' .js-products-grid').innerHTML = productsHTML;
-
-
-
-
-function updateCartQuantity(){
-    let cartQuantity = 0;
-
-    cart.forEach((cartItem) =>  {
-        cartQuantity +=  cartItem.quantity;
-    });
-    
-    
-    document.querySelector(' .js-cart-quantity').innerHTML = cartQuantity;
-
-
-    
-    
-
+// Load cart from local storage on page load
+function loadCartFromLocalStorage() {
+    const storedCart = localStorage.getItem('cart');
+    if (storedCart) {
+        cart.length = 0; // Clear existing cart items
+        cart.push(...JSON.parse(storedCart)); // Load cart items from local storage
+    }
+    updateCartQuantity();
 }
 
+// Update cart quantity display and save cart to local storage
+function updateCartQuantity() {
+    let cartQuantity = 0;
 
-
-
-
-
-
-document.querySelectorAll(' .js-add-to-cart').forEach((button)  => {
-    button.addEventListener('click', () => {
-const productId = button.dataset.productId;
-addToCart(productId);
-
-
-
-
-
-
-
-
-
-const addedMessage = document.querySelector(`.js-added-tocart-${productId}`);
-    
-    // Show the message
-    addedMessage.style.opacity = 1; // Make it visible
-    
-    // Set a timeout to fade it out after 1.5 seconds
-    setTimeout(() => {
-        addedMessage.style.opacity = 0; // Fade out
-    }, 1500);
-
-
-
-
-
-
-
-updateCartQuantity();
-
-
-
-
-
-
-
-
-
-
-
-
-
+    cart.forEach((cartItem) => {
+        cartQuantity += cartItem.quantity;
     });
 
+    document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
+
+    // Save the cart data to local storage
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+// Event listener for adding items to the cart
+document.querySelectorAll('.js-add-to-cart').forEach((button) => {
+    button.addEventListener('click', () => {
+        const productId = button.dataset.productId;
+        addToCart(productId);
+
+        const addedMessage = document.querySelector(`.js-added-tocart-${productId}`);
+        
+        // Show the "Added to Cart" message
+        addedMessage.style.opacity = 1;
+        
+        // Fade out the message after 1.5 seconds
+        setTimeout(() => {
+            addedMessage.style.opacity = 0;
+        }, 1500);
+
+        updateCartQuantity();
+    });
 });
 
-
-
-
-
-//added Lardoo
-
-
-
-
-
-
-
-
- 
+// Call the load function on page load
+loadCartFromLocalStorage();
