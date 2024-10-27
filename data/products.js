@@ -19,9 +19,79 @@
 
  export const products = [
   {
+    id: "1d",
+    image: "images/products/couch3.jpg",
+    name: '"81.5" Sectional Sleeper Sofa with Storage Chaise, L Shaped Pull Out Couch Bed with 3 Removable Back Cushion for Living Room,Apartment,Dark Grey',
+    desc:'This sleeper sofa equipped with a reversible storage chaise, with inner dimensions measuring 47"x21.5"x10",providing ample room to stow away blankets, pillows, and other essentials, offering convenient storage solutions.',
+    rating: {
+      stars: 4.5,
+      count: 1047
+    },
+    priceCents: 17800,
+    keywords: [
+      "couch",
+      "sofa",
+      "living",
+      "room"
+    ]
+  }
+  ,
+  {
+    id: "1a",
+    image: "images/products/sofa1.jpg",
+    name: "ZeeFu Convertible Sectional Sofa Couch,Classic 3 Seat L-Shaped Sofa with Movable Ottoman, Modern Dark Grey Velvet Fabric Upholstered Small Sectional Sofa Couch",
+    desc:'Triple sofa size: 78"*29"*33", ottoman size: 24"*23"*18.5". Effectively packed in a box with detailed instructions and toolkit, anyone can easily install it within 30 minutes. If you have any questions after purchasing this product, please feel free to contact us. We are glad to serve you.',
+    rating: {
+      stars: 4.5,
+      count: 2047
+    },
+    priceCents: 24900,
+    keywords: [
+      "couch",
+      "sofa",
+      "living",
+      "room"
+    ]
+  },
+  {
+    id: "1b",
+    image: "images/products/freezer1.jpg",
+    name: "LG LFDS22520S - Refrigerator/Freezer - French Door Bottom Freezer with Water Dispenser - Width: 29.8 in - Depth: 35.5 in - Height: 68.5 in - 21.8 cu. ft- Stainless Steel",
+    desc: "𝟐-𝐘𝐄𝐀𝐑 𝐖𝐀𝐑𝐑𝐀𝐍𝐓𝐘: We stand behind each appliance we design and manufacture. The 30-inch french door refrigerator by Forno offers an industry-leading 2-year factory parts and labor warranty See more product details",
+    rating: {
+      stars: 4.5,
+      count: 2047
+    },
+    priceCents: 49900,
+    keywords: [
+      "fridge",
+      "freezer",
+      "dispenser",
+      "appliances"
+    ]
+  },
+  {
+    id: "1c",
+    image: "images/products/couch2.jpg",
+    name: "Woyomeub Sectional Sofa Couches for Living Room 78 L Shaped Sofas with Storage Ottoman Small 3 Seater Couch Velvet Fabric, Beige.",
+    desc:"The dimensions of this small couch is: 78'×27.5'×32' inches / 198×70×81 cm, seating capacity of 3, which is suitable for adding additional seating space for your living room, apartment, dorm, loft or others small place.",
+    rating: {
+      stars: 4.5,
+      count: 2047
+    },
+    priceCents: 19900,
+    keywords: [
+      "couch",
+      "sofa",
+      "living",
+      "room"
+    ]
+  },
+  {
     id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
     image: "images/products/athletic-cotton-socks-6-pairs.jpg",
     name: "Black and Gray Athletic Cotton Socks - 6 Pairs",
+    desc:"Fabric Blend: our cushioned crew length socks for men are made with a blend of 51% polyester, 39% cotton, 8% rayon, and 2% spandex, these socks will feel soft against your skin and effectively wick moisture to keep your feet dry throughout the day",
     rating: {
       stars: 4.5,
       count: 87
@@ -37,6 +107,7 @@
     id: "15b6fc6f-327a-4ec4-896f-486349e85a3d",
     image: "images/products/intermediate-composite-basketball.jpg",
     name: "Intermediate Size Basketball",
+    desc: "Create a consistent feel and texture over the entire surface of the basketball to provide unparalleled control. Approved for play by the national federation of state high school associations (NFHS)",
     rating: {
       stars: 4,
       count: 127
@@ -51,6 +122,7 @@
     id: "83d4ca15-0f35-48f5-b7a3-1ea210004f2e",
     image: "images/products/adults-plain-cotton-tshirt-2-pack-teal.jpg",
     name: "Adults Plain Cotton T-Shirt - 2 Pack",
+    desc: "Classic fit for loose comfort . A great choice for everyday or work wear",
     rating: {
       stars: 4.5,
       count: 56
@@ -68,6 +140,7 @@
     id: "54e0eccd-8f36-462b-b68a-8182611d9add",
     image: "images/products/black-2-slot-toaster.jpg",
     name: "2 Slot Toaster - Black",
+    desc:"Bagels, crumpets, brioche, homemade artisan bread — all your favorites slide easily into the slots without the usual cramming and crumbling. After toasting, the extended bread lifter gently rises to the ideal height for easy access.    ",
     rating: {
       stars: 5,
       count: 2197
@@ -83,6 +156,7 @@
     id: "3ebe75dc-64d2-4137-8860-1f5a963e534b",
     image: "images/products/6-piece-white-dinner-plate-set.jpg",
     name: "6 Piece White Dinner Plate Set",
+    desc:"Includes 6 dinner plates made of durable AB-grade porcelain with a white finish.Product dimensions: 10.5 x 10.5 inches (LxW, exterior), 7.2 x 7.2 inches (LxW, recessed interior) ",
     rating: {
       stars: 4,
       count: 37
@@ -98,6 +172,7 @@
     id: "8c9c52b5-5a19-4bcb-a5d1-158a74287c53",
     image: "images/products/6-piece-non-stick-baking-set.webp",
     name: "6-Piece Nonstick, Carbon Steel Oven Bakeware Baking Set",
+    desc: "ven-Safe & durably built. This bakeware set can handle high-heat up to 446° F; making the set suitable for a wide range of baking needs & a 0. 6 mm thick with a rolled edge to keep metal from warping/flexing",
     rating: {
       stars: 4.5,
       count: 175
@@ -649,6 +724,7 @@
     id: "aaa65ef3-8d6f-4eb3-bc9b-a6ea49047d8f",
     image: "images/products/kitchen-paper-towels-30-pack.jpg",
     name: "2-Ply Kitchen Paper Towels - 30 Pack",
+    desc:"",
     rating: {
       stars: 4.5,
       count: 1045
@@ -664,6 +740,7 @@
     id: "bc2847e9-5323-403f-b7cf-57fde044a955",
     image: "images/products/men-cozy-fleece-zip-up-hoodie-red.jpg",
     name: "Men's Full-Zip Hooded Fleece Sweatshirt",
+    desc:"This men's fleece hoodie shell is made of 55% cotton +45% polyester, and lining is made of 95% high quality polyester wool, soft and skin-friendly, warm and comfortable, bring you warm enough in the cold winter days",
     rating: {
       stars: 4.5,
       count: 3157
@@ -676,4 +753,5 @@
       "mens"
     ]
   }
+  
 ];

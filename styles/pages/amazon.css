@@ -96,8 +96,16 @@
 }
 
 .product-name {
-  height: 40px;
+  height: 80px;
   margin-bottom: 5px;
+  padding-bottom: 15px;
+  font-weight: bold;  
+  
+}
+.product-desc {
+  height: 120px;
+  margin-bottom: 5px;
+  padding-bottom: 60px;
 }
 
 .product-rating-container {
