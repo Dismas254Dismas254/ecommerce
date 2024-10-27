@@ -15,7 +15,9 @@ products.forEach((product) => {
                 ${product.name}
             </div>
 
+            
             <div class="product-desc " >
+            
                 ${product.desc}
             </div>
 
