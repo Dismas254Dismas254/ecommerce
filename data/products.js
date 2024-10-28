@@ -172,7 +172,7 @@
     id: "8c9c52b5-5a19-4bcb-a5d1-158a74287c53",
     image: "images/products/6-piece-non-stick-baking-set.webp",
     name: "6-Piece Nonstick, Carbon Steel Oven Bakeware Baking Set",
-    desc: "ven-Safe & durably built. This bakeware set can handle high-heat up to 446° F; making the set suitable for a wide range of baking needs & a 0. 6 mm thick with a rolled edge to keep metal from warping/flexing",
+    desc: "Oven-Safe & durably built. This bakeware set can handle high-heat up to 446° F; making the set suitable for a wide range of baking needs & a 0. 6 mm thick with a rolled edge to keep metal from warping/flexing",
     rating: {
       stars: 4.5,
       count: 175
