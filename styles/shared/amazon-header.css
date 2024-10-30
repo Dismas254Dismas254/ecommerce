@@ -15,17 +15,17 @@
   height: 60px;
 }
 
-.amazon-header-left-section {
+.amazon-header .left-section {
   width: 180px;
 }
 
 @media (max-width: 800px) {
-  .amazon-header-left-section {
+  .amazon-header .left-section {
     width: unset;
   }
 }
 
-.header-link {
+.amazon-header .header-link {
   display: inline-block;
   padding: 6px;
   border-radius: 2px;
@@ -34,32 +34,32 @@
   border: 1px solid rgba(0, 0, 0, 0);
 }
 
-.header-link:hover {
+.amazon-header .header-link:hover {
   border: 1px solid white;
 }
 
-.amazon-logo {
+.amazon-header .amazon-logo {
   width: 100px;
   margin-top: 5px;
 }
 
-.amazon-mobile-logo {
+.amazon-header .amazon-mobile-logo {
   display: none;
 }
 
 @media (max-width: 575px) {
-  .amazon-logo {
+  .amazon-header .amazon-logo {
     display: none;
   }
 
-  .amazon-mobile-logo {
+  .amazon-header .amazon-mobile-logo {
     display: block;
     height: 35px;
     margin-top: 5px;
   }
 }
 
-.amazon-header-middle-section {
+.amazon-header .middle-section {
   flex: 1;
   max-width: 850px;
   margin-left: 10px;
@@ -67,37 +67,20 @@
   display: flex;
 }
 
-.search-bar {
-  flex: 1;                             /* Allows it to grow within a flex container */
-  width: 100%;                         /* Sets initial full width for responsiveness */
+.amazon-header .search-bar {
+  flex: 1;
+  width: 0;
   font-size: 16px;
   height: 38px;
   padding-left: 15px;
   border: none;
-  border-radius: 4px 0 0 4px;          /* Rounded corners on the left side */
-  box-sizing: border-box;              /* Ensures padding doesn’t increase width */
-  transition: all 0.3s ease;           /* Smooth transition for responsiveness */
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
-/* Responsive adjustments for smaller screens */
-@media (max-width: 768px) {
-  .search-bar {
-    font-size: 14px;                  /* Reduces font size for better fit */
-    height: 36px;                     /* Adjusts height for smaller screens */
-    padding-left: 10px;               /* Decreases padding for compact view */
-  }
-}
-
-@media (max-width: 480px) {
-  .search-bar {
-    font-size: 13px;                  /* Further reduces font size for very small screens */
-    height: 34px;                     /* Adjusts height to fit smaller screens */
-    padding-left: 8px;                /* Reduces padding further */
-    width: 100%;                      /* Ensures full width within a container */
-  }
-}
-
-.search-button {
+.amazon-header .search-button {
   background-color: rgb(254, 189, 105);
   border: none;
   width: 45px;
@@ -107,60 +90,122 @@
   flex-shrink: 0;
 }
 
-.search-icon {
+.amazon-header .search-icon {
   height: 22px;
   margin-left: 2px;
   margin-top: 3px;
 }
 
-.amazon-header-right-section {
+.amazon-header .right-section {
   width: 180px;
   flex-shrink: 0;
   display: flex;
   justify-content: end;
 }
 
-.orders-link {
+.amazon-header .right-section-mobile {
+  display: none;
+}
+
+@media (max-width: 575px) {
+  .amazon-header .right-section {
+    display: none;
+  }
+
+  .amazon-header .right-section-mobile {
+    display: block;
+  }
+}
+
+.amazon-header .hamburger-menu-toggle {
+  display: block;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.amazon-header .hamburger-menu-dropdown {
+  background-color: rgb(19, 25, 33);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 60px;
+
+  z-index: 100;
+  text-align: center;
+
+  display: none;
+  overflow: hidden;
+
+  /* We will use JavaScript to change this height. */
+  height: 0px;
+  transition: height 0.25s;
+}
+
+@media (max-width: 575px) {
+  .amazon-header .hamburger-menu-dropdown {
+    display: block;
+  }
+
+  .amazon-header .hamburger-menu-opened {
+    height: 88px;
+  }
+
+  .amazon-header .hamburger-menu-link {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    font-weight: 500;
+  }
+
+  .amazon-header .hamburger-menu-link:hover {
+    background-color: rgb(38, 50, 63);
+  }
+}
+
+.amazon-header .orders-link {
   color: white;
 }
 
-.returns-text {
+.amazon-header .returns-text {
   display: block;
   font-size: 13px;
 }
 
-.orders-text {
+.amazon-header .orders-text {
   display: block;
   font-size: 15px;
   font-weight: 700;
 }
 
-.cart-link {
+.amazon-header .cart-link {
   color: white;
   display: flex;
   align-items: center;
   position: relative;
 }
 
-.cart-icon {
+.amazon-header .cart-icon {
   width: 50px;
 }
 
-.cart-text {
+.amazon-header .cart-text {
   margin-top: 12px;
   font-size: 15px;
   font-weight: 700;
 }
 
-.cart-quantity {
+.amazon-header .cart-quantity {
   color: rgb(240, 136, 4);
   font-size: 16px;
   font-weight: 700;
-
   position: absolute;
   top: 4px;
   left: 22px;
-  
   width: 26px;
   text-align: center;
+}
+
+.amazon-header .cart-quantity-mobile {
+  color: rgb(240, 136, 4);
 }
