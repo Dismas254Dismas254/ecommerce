@@ -68,16 +68,33 @@
 }
 
 .search-bar {
-  flex: 1;
-  width: 0;
+  flex: 1;                             /* Allows it to grow within a flex container */
+  width: 100%;                         /* Sets initial full width for responsiveness */
   font-size: 16px;
   height: 38px;
   padding-left: 15px;
   border: none;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+  border-radius: 4px 0 0 4px;          /* Rounded corners on the left side */
+  box-sizing: border-box;              /* Ensures padding doesn’t increase width */
+  transition: all 0.3s ease;           /* Smooth transition for responsiveness */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .search-bar {
+    font-size: 14px;                  /* Reduces font size for better fit */
+    height: 36px;                     /* Adjusts height for smaller screens */
+    padding-left: 10px;               /* Decreases padding for compact view */
+  }
+}
+
+@media (max-width: 480px) {
+  .search-bar {
+    font-size: 13px;                  /* Further reduces font size for very small screens */
+    height: 34px;                     /* Adjusts height to fit smaller screens */
+    padding-left: 8px;                /* Reduces padding further */
+    width: 100%;                      /* Ensures full width within a container */
+  }
 }
 
 .search-button {

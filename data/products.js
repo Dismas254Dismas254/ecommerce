@@ -19,6 +19,23 @@
 
  export const products = [
   {
+    id: "1i",
+    image: "images/products/pool5.jpg",
+    name: 'Mizerak Dynasty Space Saver 6.5’ Billiard Table',
+    desc:' The product is Dimensions	78"L x 44"W x 32"H. Automatic ball return.',
+    rating: {
+      stars: 4.5,
+      count: 2047
+    },
+    priceCents: 38000,
+    keywords: [
+      "couch",
+      "sofa",
+      "living",
+      "room"
+    ]
+  },
+  {
     id: "1h",
     image: "images/products/pool4.jpg",
     name: 'Barrington Billiards Multiple Styles Pool Table, Preassembled Playfields with Complete Billiard Accessory Sets',
