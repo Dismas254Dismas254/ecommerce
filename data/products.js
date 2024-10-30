@@ -19,6 +19,74 @@
 
  export const products = [
   {
+    id: "1h",
+    image: "images/products/pool4.jpg",
+    name: 'Barrington Billiards Multiple Styles Pool Table, Preassembled Playfields with Complete Billiard Accessory Sets',
+    desc:' The product is Dimensions	100"L x 56"W x 31"H and the recommended room size is 17’ x 14’ to allow for cue stick movement around the table',
+    rating: {
+      stars: 4.5,
+      count: 2047
+    },
+    priceCents: 38000,
+    keywords: [
+      "couch",
+      "sofa",
+      "living",
+      "room"
+    ]
+  },
+  {
+    id: "1g",
+    image: "images/products/pool3.jpg",
+    name: 'GoSports 6, 7, or 8 ft Billiards Table - Portable Pool Table ',
+    desc:' Includes Full Set of Balls, 2 Cue Sticks, Chalk and Felt Brush. Great size for competitive games, but small enough to store anywhere; Assembled: 84 L x 47 W x 31 H inches',
+    rating: {
+      stars: 4.5,
+      count: 1047
+    },
+    priceCents: 19900,
+    keywords: [
+      "couch",
+      "sofa",
+      "living",
+      "room"
+    ]
+  },
+  {
+    id: "1f",
+    image: "images/products/pool2.jpg",
+    name: 'Hathaway Maverick II 7 Ft Pool Table, with Ping Pong Multi Game Combo Tables ',
+    desc:'7-FT POOL TABLE WITH BLUE FELT - Table measures 84-in L x 46-in W x 31-in H; Full set includes two 57-in cues, sixteen 2.25-in billiard balls, a triangle, chalk and brush. It also comes with two table tennis balls, two paddles, two posts, and a net.',
+    rating: {
+      stars: 5,
+      count: 2197
+    },
+    priceCents: 25000,
+    keywords: [
+      "couch",
+      "sofa",
+      "living",
+      "room"
+    ]
+  },
+  {
+    id: "1e",
+    image: "images/products/pool1.jpg",
+    name: 'Hathaway Montecito 8 Ft Furniture Pool Table – Includes Cue Sticks, Billiard Balls ',
+    desc:'8-FT POOL TABLE - Table measures 96-in L x 55.5-in W x 32.5-in H; Full set includes two 57-in pool cues, one set of billiard balls, two pieces of cue chalk, one table brush, and one racking triangle.',
+    rating: {
+      stars: 4.5,
+      count: 2197
+    },
+    priceCents: 40000,
+    keywords: [
+      "couch",
+      "sofa",
+      "living",
+      "room"
+    ]
+  },
+  {
     id: "1d",
     image: "images/products/couch3.jpg",
     name: '"81.5" Sectional Sleeper Sofa with Storage Chaise, L Shaped Pull Out Couch Bed with 3 Removable Back Cushion for Living Room,Apartment,Dark Grey',
