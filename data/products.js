@@ -19,6 +19,57 @@
 
  export const products = [
   {
+    id: "1h",
+    image: "images/products/freezer4.jpg",
+    name: 'Kratos Commercial Freezer, 2-Door Reach-in Freezer.',
+    desc:' The product is Dimensions	33.37"D x 54.12"W x 80"H.',
+    rating: {
+      stars: 4.5,
+      count: 2047
+    },
+    priceCents: 99000,
+    keywords: [
+      "couch",
+      "sofa",
+      "living",
+      "room"
+    ]
+  },
+  {
+    id: "1g",
+    image: "images/products/freezer3.jpg",
+    name: 'Single Door Commercial Reach In Stainless Steel Freezer',
+    desc:' PEAK COLD 29" wide x 32.2" deep x 82.5" tall with 23 Cubic Ft interior space.',
+    rating: {
+      stars: 5,
+      count: 3047
+    },
+    priceCents: 79000,
+    keywords: [
+      "couch",
+      "sofa",
+      "living",
+      "room"
+    ]
+  },
+  {
+    id: "1f",
+    image: "images/products/freezer2.jpg",
+    name: 'Kenmore 21 Cu. Ft. (600L) Convertible Upright Freezer/Refrigerator',
+    desc:' The product is Dimensions	30.8"D x 33.1"W x 74.6"H. 21 Cu. Ft. (595L) Capacity: With 21 cubic feet of storage space, this huge upright fridge/freezer can store up to 735 lbs of food!',
+    rating: {
+      stars: 5,
+      count: 1047
+    },
+    priceCents: 49000,
+    keywords: [
+      "couch",
+      "sofa",
+      "living",
+      "room"
+    ]
+  },
+  {
     id: "1i",
     image: "images/products/pool5.jpg",
     name: 'Mizerak Dynasty Space Saver 6.5’ Billiard Table',
