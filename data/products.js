@@ -19,6 +19,176 @@
 
  export const products = [
   {
+    id: "1q",
+    image: "images/products/hoody10.jpg",
+    name: "Denny&Dora Hooded Shearling Jacket Mens B3 Flight Jacket Short Leather Jacket Mans Sheepskin Aviator Fur Coat",
+    desc:'Generous Fashion Lapel Hooded Design, Selection Of Lambs Wool, Exquisite Workmanship, Each Wonderful Moment',
+    rating: {
+      stars: 5,
+      count: 2047
+    },
+    priceCents: 31500,
+    keywords: [
+      "couch",
+      "sofa",
+      "living",
+      "room"
+    ]
+  },
+  {
+    id: "1p",
+    image: "images/products/hoody9.jpg",
+    name: "Urban Backwoods Buzzsaw Hoodie Hooded Sweatshirt Sweater",
+    desc:'Hoodie Hooded Sweatshirt Sweater with high wearing comfort!',
+    rating: {
+      stars: 4.5,
+      count: 2047
+    },
+    priceCents: 21500,
+    keywords: [
+      "couch",
+      "sofa",
+      "living",
+      "room"
+    ]
+  },
+  {
+    id: "1o",
+    image: "images/products/hoody7.jpg",
+    name: "RMC MKWS Black Empire Hoody REDM2329",
+    desc:'RMC MKWS black empire hoody REDM2329',
+    rating: {
+      stars: 5,
+      count: 1047
+    },
+    priceCents: 11500,
+    keywords: [
+      "couch",
+      "sofa",
+      "living",
+      "room"
+    ]
+  },
+  {
+    id: "1n",
+    image: "images/products/hoody8.jpg",
+    name: "Mens nylon functional jacket REDM4420",
+    desc:'RMC Jeans mens nylon functional jacket REDM4420',
+    rating: {
+      stars: 5,
+      count: 2047
+    },
+    priceCents: 28000,
+    keywords: [
+      "couch",
+      "sofa",
+      "living",
+      "room"
+    ]
+  },
+  {
+    id: "1m",
+    image: "images/products/hoody6.jpg",
+    name: "Pendleton Men's Brownsvillle Wool Coat",
+    desc:'Genuine shearling collar,Button closures, patch pockets',
+    rating: {
+      stars: 5,
+      count: 1047
+    },
+    priceCents: 20000,
+    keywords: [
+      "couch",
+      "sofa",
+      "living",
+      "room"
+    ]
+  },
+  {
+    id: "1l",
+    image: "images/products/hoody5.jpg",
+    name: "Rasco FR Canvas Hooded Jacket",
+    desc:'FR Hoodies for Men 10.5oz FR Sweatshirt 100% Cotton FR Pullover and Zipper Front Flame Resistant Hooded Shirts ',
+    rating: {
+      stars: 4.5,
+      count: 2047
+    },
+    priceCents: 10000,
+    keywords: [
+      "couch",
+      "sofa",
+      "living",
+      "room"
+    ]
+  },
+  {
+    id: "1k",
+    image: "images/products/hoody4.jpg",
+    name: "Stormy Kromer Tailgate Pullover – Men’s Cold Weather Hoodie Sweater Dark Navy",
+    desc:'Made in the USA,Pull On closure,Machine Wash ',
+    rating: {
+      stars: 5,
+      count: 1047
+    },
+    priceCents: 11900,
+    keywords: [
+      "couch",
+      "sofa",
+      "living",
+      "room"
+    ]
+  },
+  {
+    id: "1j",
+    image: "images/products/hoody3.jpg",
+    name: "Fjallraven Keb Padded Hoodie - Men's",
+    desc:'Ideal for hiking. Stretchy polyester is filled with the new synthetic G-Loft Supreme which has properties similar to down. Full-zip closure with attached hood. ',
+    rating: {
+      stars: 4.5,
+      count: 2047
+    },
+    priceCents: 12900,
+    keywords: [
+      "couch",
+      "sofa",
+      "living",
+      "room"
+    ]
+  },
+  {
+    id: "1j",
+    image: "images/products/hoody2.jpg",
+    name: "Fight Power USA Hoodie",
+    desc:' Thanks to its heavyweight fabric, it maintains sharp lines along the edges and lasts a long time',
+    rating: {
+      stars: 4.5,
+      count: 2047
+    },
+    priceCents: 15900,
+    keywords: [
+      "couch",
+      "sofa",
+      "living",
+      "room"
+    ]
+  },
+  {
+    id: "1i",
+    image: "images/products/hoody1.jpg",
+    name: "SITKA Gear Men's Grinder Insulated Fleece Camo Hunting Hoody",
+    desc:' Provides warmth in addition to being water-repellent in light rain.',
+    rating: {
+      stars: 5,
+      count: 1047
+    },
+    priceCents: 11800,
+    keywords: [
+      "couch",
+      "sofa",
+      "living",
+      "room"
+    ]
+  },
+  {
     id: "1h",
     image: "images/products/freezer4.jpg",
     name: 'Kratos Commercial Freezer, 2-Door Reach-in Freezer.',
