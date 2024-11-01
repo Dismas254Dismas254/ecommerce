@@ -4,25 +4,21 @@ import { formatCurrency } from './utils/money.js';
 
 let productsHTML = '';
 
-// Generate product list HTML
-products.forEach((product) => {
-    productsHTML += `
-        <div class="product-container">
+// Function to generate product list HTML
+function generateProductsHTML(productList) {
+    return productList.map(product => `
+        <div class="product-container" data-product-id="${product.id}">
             <div class="product-image-container">
-                <img class="product-image" src="${product.image}">
+                <img class="product-image" src="${product.image}" alt="${product.name}">
             </div>
             <div class="product-name limit-text-to-2-lines">
                 ${product.name}
             </div>
-
-            
-            <div class="product-desc " >
-            
+            <div class="product-desc">
                 ${product.desc}
             </div>
-
             <div class="product-rating-container">
-                <img class="product-rating-stars" src="images/ratings/rating-${product.rating.stars * 10}.png">
+                <img class="product-rating-stars" src="images/ratings/rating-${product.rating.stars * 10}.png" alt="Rating: ${product.rating.stars}">
                 <div class="product-rating-count link-primary">
                     ${product.rating.count}
                 </div>
@@ -44,16 +40,17 @@ products.forEach((product) => {
             </div>
             <div class="product-spacer"></div>
             <div class="added-to-cart js-added-tocart-${product.id}">
-                <img src="images/icons/checkmark.png"> Added
+                <img src="images/icons/checkmark.png" alt="Added to cart"> Added
             </div>
             <button class="add-to-cart-button button-primary js-add-to-cart" data-product-id="${product.id}">
                 Add to Cart
             </button>
-        </div>`;
-});
+        </div>
+    `).join('');
+}
 
-// Display product list in HTML
-document.querySelector('.js-products-grid').innerHTML = productsHTML;
+// Display all products on page load
+document.querySelector('.js-products-grid').innerHTML = generateProductsHTML(products);
 
 // Load cart from local storage on page load
 function loadCartFromLocalStorage() {
@@ -101,3 +98,32 @@ document.querySelectorAll('.js-add-to-cart').forEach((button) => {
 
 // Call the load function on page load
 loadCartFromLocalStorage();
+
+// Search functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const searchBar = document.querySelector('.js-search-bar');
+    const searchButton = document.querySelector('.js-search-button');
+
+    // Function to search products and display results
+    function searchProducts(keyword) {
+        const lowerCaseKeyword = keyword.toLowerCase();
+        const filteredProducts = products.filter(product =>
+            product.name.toLowerCase().includes(lowerCaseKeyword) ||
+            (product.desc && product.desc.toLowerCase().includes(lowerCaseKeyword)) ||
+            (product.keywords && product.keywords.some(k => k.toLowerCase().includes(lowerCaseKeyword))) // Check keywords
+        );
+
+        // Regenerate productsHTML based on filtered products
+        document.querySelector('.js-products-grid').innerHTML = generateProductsHTML(filteredProducts);
+    }
+
+    // Event listener for search input (for "Enter" key or button click)
+    searchBar.addEventListener('input', (event) => {
+        searchProducts(event.target.value);
+    });
+
+    // Optionally, add search on button click
+    searchButton.addEventListener('click', () => {
+        searchProducts(searchBar.value);
+    });
+});
