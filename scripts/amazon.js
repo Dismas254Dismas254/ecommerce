@@ -76,28 +76,31 @@ function updateCartQuantity() {
     localStorage.setItem('cart', JSON.stringify(cart));
 }
 
-// Event listener for adding items to the cart
-document.querySelectorAll('.js-add-to-cart').forEach((button) => {
-    button.addEventListener('click', () => {
-        const productId = button.dataset.productId;
-        addToCart(productId);
+// Function to add event listeners for "Add to Cart" buttons
+function addCartButtonListeners() {
+    document.querySelectorAll('.js-add-to-cart').forEach((button) => {
+        button.addEventListener('click', () => {
+            const productId = button.dataset.productId;
+            addToCart(productId);
 
-        const addedMessage = document.querySelector(`.js-added-tocart-${productId}`);
-        
-        // Show the "Added to Cart" message
-        addedMessage.style.opacity = 1;
-        
-        // Fade out the message after 1.5 seconds
-        setTimeout(() => {
-            addedMessage.style.opacity = 0;
-        }, 1500);
+            const addedMessage = document.querySelector(`.js-added-tocart-${productId}`);
+            
+            // Show the "Added to Cart" message
+            addedMessage.style.opacity = 1;
+            
+            // Fade out the message after 1.5 seconds
+            setTimeout(() => {
+                addedMessage.style.opacity = 0;
+            }, 1500);
 
-        updateCartQuantity();
+            updateCartQuantity();
+        });
     });
-});
+}
 
 // Call the load function on page load
 loadCartFromLocalStorage();
+addCartButtonListeners(); // Add listeners for initially loaded products
 
 // Search functionality
 document.addEventListener('DOMContentLoaded', () => {
@@ -115,6 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Regenerate productsHTML based on filtered products
         document.querySelector('.js-products-grid').innerHTML = generateProductsHTML(filteredProducts);
+        addCartButtonListeners(); // Re-add listeners for newly displayed products
     }
 
     // Event listener for search input (for "Enter" key or button click)
