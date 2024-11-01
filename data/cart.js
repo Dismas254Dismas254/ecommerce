@@ -5,6 +5,7 @@ if (!cart) {
 
    cart  =   [
 
+
     ];
 }
 
@@ -52,6 +53,8 @@ if (matchingItem) {
 
 
 saveToStorage();
+
+
 
 }
 
