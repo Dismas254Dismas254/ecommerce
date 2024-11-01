@@ -223,7 +223,7 @@
     ]
   },
   {
-    id: "1f",
+    id: "1f1",
     image: "images/products/freezer2.jpg",
     name: 'Kenmore 21 Cu. Ft. (600L) Convertible Upright Freezer/Refrigerator',
     desc:' The product is Dimensions	30.8"D x 33.1"W x 74.6"H. 21 Cu. Ft. (595L) Capacity: With 21 cubic feet of storage space, this huge upright fridge/freezer can store up to 735 lbs of food!',
@@ -291,7 +291,7 @@
     ]
   },
   {
-    id: "1f",
+    id: "1f2",
     image: "images/products/pool2.jpg",
     name: 'Hathaway Maverick II 7 Ft Pool Table, with Ping Pong Multi Game Combo Tables ',
     desc:'7-FT POOL TABLE WITH BLUE FELT - Table measures 84-in L x 46-in W x 31-in H; Full set includes two 57-in cues, sixteen 2.25-in billiard balls, a triangle, chalk and brush. It also comes with two table tennis balls, two paddles, two posts, and a net.',
