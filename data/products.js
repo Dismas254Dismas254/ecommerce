@@ -17,12 +17,12 @@
 
 
 
- export const products = [
+export const products = [
   {
     id: "1q",
     image: "images/products/hoody10.jpg",
     name: "Denny&Dora Hooded Shearling Jacket Mens B3 Flight Jacket Short Leather Jacket Mans Sheepskin Aviator Fur Coat",
-    desc:'Generous Fashion Lapel Hooded Design, Selection Of Lambs Wool, Exquisite Workmanship, Each Wonderful Moment',
+    desc: 'Generous Fashion Lapel Hooded Design, Selection Of Lambs Wool, Exquisite Workmanship, Each Wonderful Moment',
     rating: {
       stars: 5,
       count: 2047
@@ -39,7 +39,7 @@
     id: "1p",
     image: "images/products/hoody9.jpg",
     name: "Urban Backwoods Buzzsaw Hoodie Hooded Sweatshirt Sweater",
-    desc:'Hoodie Hooded Sweatshirt Sweater with high wearing comfort!',
+    desc: 'Hoodie Hooded Sweatshirt Sweater with high wearing comfort!',
     rating: {
       stars: 4.5,
       count: 2047
@@ -56,7 +56,7 @@
     id: "1o",
     image: "images/products/hoody7.jpg",
     name: "RMC MKWS Black Empire Hoody REDM2329",
-    desc:'RMC MKWS black empire hoody REDM2329',
+    desc: 'RMC MKWS black empire hoody REDM2329',
     rating: {
       stars: 5,
       count: 1047
@@ -73,7 +73,7 @@
     id: "1n",
     image: "images/products/hoody8.jpg",
     name: "Mens nylon functional jacket REDM4420",
-    desc:'RMC Jeans mens nylon functional jacket REDM4420',
+    desc: 'RMC Jeans mens nylon functional jacket REDM4420',
     rating: {
       stars: 5,
       count: 2047
@@ -90,7 +90,7 @@
     id: "1m",
     image: "images/products/hoody6.jpg",
     name: "Pendleton Men's Brownsvillle Wool Coat",
-    desc:'Genuine shearling collar,Button closures, patch pockets',
+    desc: 'Genuine shearling collar, Button closures, patch pockets',
     rating: {
       stars: 5,
       count: 1047
@@ -107,7 +107,7 @@
     id: "1l",
     image: "images/products/hoody5.jpg",
     name: "Rasco FR Canvas Hooded Jacket",
-    desc:'FR Hoodies for Men 10.5oz FR Sweatshirt 100% Cotton FR Pullover and Zipper Front Flame Resistant Hooded Shirts ',
+    desc: 'FR Hoodies for Men 10.5oz FR Sweatshirt 100% Cotton FR Pullover and Zipper Front Flame Resistant Hooded Shirts',
     rating: {
       stars: 4.5,
       count: 2047
@@ -124,7 +124,7 @@
     id: "1k",
     image: "images/products/hoody4.jpg",
     name: "Stormy Kromer Tailgate Pullover – Men’s Cold Weather Hoodie Sweater Dark Navy",
-    desc:'Made in the USA,Pull On closure,Machine Wash ',
+    desc: 'Made in the USA, Pull On closure, Machine Wash',
     rating: {
       stars: 5,
       count: 1047
@@ -138,10 +138,10 @@
     ]
   },
   {
-    id: "1j",
+    id: "1j-1",
     image: "images/products/hoody3.jpg",
     name: "Fjallraven Keb Padded Hoodie - Men's",
-    desc:'Ideal for hiking. Stretchy polyester is filled with the new synthetic G-Loft Supreme which has properties similar to down. Full-zip closure with attached hood. ',
+    desc: 'Ideal for hiking. Stretchy polyester is filled with the new synthetic G-Loft Supreme which has properties similar to down. Full-zip closure with attached hood.',
     rating: {
       stars: 4.5,
       count: 2047
@@ -155,10 +155,10 @@
     ]
   },
   {
-    id: "1j",
+    id: "1j-2",
     image: "images/products/hoody2.jpg",
     name: "Fight Power USA Hoodie",
-    desc:' Thanks to its heavyweight fabric, it maintains sharp lines along the edges and lasts a long time',
+    desc: 'Thanks to its heavyweight fabric, it maintains sharp lines along the edges and lasts a long time',
     rating: {
       stars: 4.5,
       count: 2047
@@ -175,7 +175,7 @@
     id: "1i",
     image: "images/products/hoody1.jpg",
     name: "SITKA Gear Men's Grinder Insulated Fleece Camo Hunting Hoody",
-    desc:' Provides warmth in addition to being water-repellent in light rain.',
+    desc: 'Provides warmth in addition to being water-repellent in light rain.',
     rating: {
       stars: 5,
       count: 1047
@@ -189,10 +189,10 @@
     ]
   },
   {
-    id: "1h",
+    id: "1h-1",
     image: "images/products/freezer4.jpg",
     name: 'Kratos Commercial Freezer, 2-Door Reach-in Freezer.',
-    desc:' The product is Dimensions	33.37"D x 54.12"W x 80"H.',
+    desc: 'The product is Dimensions 33.37"D x 54.12"W x 80"H.',
     rating: {
       stars: 4.5,
       count: 2047
@@ -206,10 +206,27 @@
     ]
   },
   {
-    id: "1g",
+    id: "1h-2",
+    image: "images/products/pool4.jpg",
+    name: 'Barrington Billiards Multiple Styles Pool Table, Preassembled Playfields with Complete Billiard Accessory Sets',
+    desc: 'The product is Dimensions 100"L x 56"W x 31"H and the recommended room size is 17’ x 14’ to allow for cue stick movement around the table',
+    rating: {
+      stars: 4.5,
+      count: 2047
+    },
+    priceCents: 38000,
+    keywords: [
+      "couch",
+      "sofa",
+      "living",
+      "room"
+    ]
+  },
+  {
+    id: "1g-1",
     image: "images/products/freezer3.jpg",
     name: 'Single Door Commercial Reach In Stainless Steel Freezer',
-    desc:' PEAK COLD 29" wide x 32.2" deep x 82.5" tall with 23 Cubic Ft interior space.',
+    desc: 'PEAK COLD 29" wide x 32.2" deep x 82.5" tall with 23 Cubic Ft interior space.',
     rating: {
       stars: 5,
       count: 3047
@@ -223,10 +240,27 @@
     ]
   },
   {
-    id: "1f1",
+    id: "1g-2",
+    image: "images/products/pool3.jpg",
+    name: 'GoSports 6, 7, or 8 ft Billiards Table - Portable Pool Table ',
+    desc: 'Includes Full Set of Balls, 2 Cue Sticks, Chalk and Felt Brush. Great size for competitive games, but small enough to store anywhere; Assembled: 84 L x 47 W x 31 H inches',
+    rating: {
+      stars: 4.5,
+      count: 1047
+    },
+    priceCents: 19900,
+    keywords: [
+      "couch",
+      "sofa",
+      "living",
+      "room"
+    ]
+  },
+  {
+    id: "1f-1",
     image: "images/products/freezer2.jpg",
     name: 'Kenmore 21 Cu. Ft. (600L) Convertible Upright Freezer/Refrigerator',
-    desc:' The product is Dimensions	30.8"D x 33.1"W x 74.6"H. 21 Cu. Ft. (595L) Capacity: With 21 cubic feet of storage space, this huge upright fridge/freezer can store up to 735 lbs of food!',
+    desc: 'The product is Dimensions 30.8"D x 33.1"W x 74.6"H. 21 Cu. Ft. (595L) Capacity: With 21 cubic feet of storage space, this huge upright fridge/freezer can store up to 735 lbs of food!',
     rating: {
       stars: 5,
       count: 1047
@@ -240,10 +274,10 @@
     ]
   },
   {
-    id: "1i",
+    id: "1i-1",
     image: "images/products/pool5.jpg",
     name: 'Mizerak Dynasty Space Saver 6.5’ Billiard Table',
-    desc:' The product is Dimensions	78"L x 44"W x 32"H. Automatic ball return.',
+    desc: 'The product is Dimensions 78"L x 44"W x 32"H. Automatic ball return.',
     rating: {
       stars: 4.5,
       count: 2047
@@ -257,135 +291,15 @@
     ]
   },
   {
-    id: "1h",
+    id: "1i-2",
     image: "images/products/pool4.jpg",
     name: 'Barrington Billiards Multiple Styles Pool Table, Preassembled Playfields with Complete Billiard Accessory Sets',
-    desc:' The product is Dimensions	100"L x 56"W x 31"H and the recommended room size is 17’ x 14’ to allow for cue stick movement around the table',
+    desc: 'The product is Dimensions 100"L x 56"W x 31"H and the recommended room size is 17’ x 14’ to allow for cue stick movement around the table',
     rating: {
       stars: 4.5,
       count: 2047
     },
     priceCents: 38000,
-    keywords: [
-      "couch",
-      "sofa",
-      "living",
-      "room"
-    ]
-  },
-  {
-    id: "1g",
-    image: "images/products/pool3.jpg",
-    name: 'GoSports 6, 7, or 8 ft Billiards Table - Portable Pool Table ',
-    desc:' Includes Full Set of Balls, 2 Cue Sticks, Chalk and Felt Brush. Great size for competitive games, but small enough to store anywhere; Assembled: 84 L x 47 W x 31 H inches',
-    rating: {
-      stars: 4.5,
-      count: 1047
-    },
-    priceCents: 19900,
-    keywords: [
-      "couch",
-      "sofa",
-      "living",
-      "room"
-    ]
-  },
-  {
-    id: "1f2",
-    image: "images/products/pool2.jpg",
-    name: 'Hathaway Maverick II 7 Ft Pool Table, with Ping Pong Multi Game Combo Tables ',
-    desc:'7-FT POOL TABLE WITH BLUE FELT - Table measures 84-in L x 46-in W x 31-in H; Full set includes two 57-in cues, sixteen 2.25-in billiard balls, a triangle, chalk and brush. It also comes with two table tennis balls, two paddles, two posts, and a net.',
-    rating: {
-      stars: 5,
-      count: 2197
-    },
-    priceCents: 25000,
-    keywords: [
-      "couch",
-      "sofa",
-      "living",
-      "room"
-    ]
-  },
-  {
-    id: "1e",
-    image: "images/products/pool1.jpg",
-    name: 'Hathaway Montecito 8 Ft Furniture Pool Table – Includes Cue Sticks, Billiard Balls ',
-    desc:'8-FT POOL TABLE - Table measures 96-in L x 55.5-in W x 32.5-in H; Full set includes two 57-in pool cues, one set of billiard balls, two pieces of cue chalk, one table brush, and one racking triangle.',
-    rating: {
-      stars: 4.5,
-      count: 2197
-    },
-    priceCents: 40000,
-    keywords: [
-      "couch",
-      "sofa",
-      "living",
-      "room"
-    ]
-  },
-  {
-    id: "1d",
-    image: "images/products/couch3.jpg",
-    name: '"81.5" Sectional Sleeper Sofa with Storage Chaise, L Shaped Pull Out Couch Bed with 3 Removable Back Cushion for Living Room,Apartment,Dark Grey',
-    desc:'This sleeper sofa equipped with a reversible storage chaise, with inner dimensions measuring 47"x21.5"x10",providing ample room to stow away blankets, pillows, and other essentials, offering convenient storage solutions.',
-    rating: {
-      stars: 4.5,
-      count: 1047
-    },
-    priceCents: 17800,
-    keywords: [
-      "couch",
-      "sofa",
-      "living",
-      "room"
-    ]
-  }
-  ,
-  {
-    id: "1a",
-    image: "images/products/sofa1.jpg",
-    name: "ZeeFu Convertible Sectional Sofa Couch,Classic 3 Seat L-Shaped Sofa with Movable Ottoman, Modern Dark Grey Velvet Fabric Upholstered Small Sectional Sofa Couch",
-    desc:'Triple sofa size: 78"*29"*33", ottoman size: 24"*23"*18.5". Effectively packed in a box with detailed instructions and toolkit, anyone can easily install it within 30 minutes. If you have any questions after purchasing this product, please feel free to contact us. We are glad to serve you.',
-    rating: {
-      stars: 4.5,
-      count: 2047
-    },
-    priceCents: 24900,
-    keywords: [
-      "couch",
-      "sofa",
-      "living",
-      "room"
-    ]
-  },
-  {
-    id: "1b",
-    image: "images/products/freezer1.jpg",
-    name: "LG LFDS22520S - Refrigerator/Freezer - French Door Bottom Freezer with Water Dispenser - Width: 29.8 in - Depth: 35.5 in - Height: 68.5 in - 21.8 cu. ft- Stainless Steel",
-    desc: "𝟐-𝐘𝐄𝐀𝐑 𝐖𝐀𝐑𝐑𝐀𝐍𝐓𝐘: We stand behind each appliance we design and manufacture. The 30-inch french door refrigerator by Forno offers an industry-leading 2-year factory parts and labor warranty See more product details",
-    rating: {
-      stars: 4.5,
-      count: 2047
-    },
-    priceCents: 49900,
-    keywords: [
-      "fridge",
-      "freezer",
-      "dispenser",
-      "appliances"
-    ]
-  },
-  {
-    id: "1c",
-    image: "images/products/couch2.jpg",
-    name: "Woyomeub Sectional Sofa Couches for Living Room 78 L Shaped Sofas with Storage Ottoman Small 3 Seater Couch Velvet Fabric, Beige.",
-    desc:"The dimensions of this small couch is: 78'×27.5'×32' inches / 198×70×81 cm, seating capacity of 3, which is suitable for adding additional seating space for your living room, apartment, dorm, loft or others small place.",
-    rating: {
-      stars: 4.5,
-      count: 2047
-    },
-    priceCents: 19900,
     keywords: [
       "couch",
       "sofa",
