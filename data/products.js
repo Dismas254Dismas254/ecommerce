@@ -19,6 +19,75 @@
 
 export const products = [
   {
+    id: "1u",
+    image: "images/products/phone4.jpg",
+    name: "Google Pixel 9 Pro Fold - Unlocked Android Smartphone ",
+    desc: 'Features: 16GB RAM, 512GB ROM, 6.3 inches, Unlocked, 5G ',
+    rating: {
+      stars: 4.5,
+      count: 2047
+    },
+    priceCents: 75000,
+    keywords: [
+      "phone",
+      "electronics",
+      "iphone",
+      "devices"
+    ]
+  },
+  {
+    id: "1t",
+    image: "images/products/phone3.jpg",
+    name: "Apple iPhone 15 Pro, 512GB, Black Titanium - Unlocked",
+    desc: 'Features: 8GB RAM, 512GB ROM, 6.1 inches, Unlocked, 5G ',
+    rating: {
+      stars: 5,
+      count: 2047
+    },
+    priceCents: 45000,
+    keywords: [
+      "phone",
+      "electronics",
+      "iphone",
+      "devices"
+    ]
+  },
+  {
+    id: "1s",
+    image: "images/products/phone2.jpg",
+    name: "SAMSUNG Galaxy S24 FE AI Phone",
+    desc: 'Features: 8GB RAM, 256GB ROM, 6.7 inches, Unlocked, 5G ',
+    rating: {
+      stars: 5,
+      count: 2047
+    },
+    priceCents: 35000,
+    keywords: [
+      "phone",
+      "electronics",
+      "iphone",
+      "devices"
+    ]
+  },
+  {
+    id: "1r",
+    image: "images/products/phone1.jpg",
+    name: "Apple iPhone 14 Pro, 256GB, Deep Purple - Refurbished",
+    desc: 'Features: 8GB RAM, 256GB ROM, 6.1 inches, Unlocked, 5G ',
+    rating: {
+      stars: 4.5,
+      count: 1047
+    },
+    priceCents: 30000,
+    keywords: [
+      "phone",
+      "electronics",
+      "iphone",
+      "devices"
+    ]
+  },
+  
+  {
     id: "1q",
     image: "images/products/hoody10.jpg",
     name: "Denny&Dora Hooded Shearling Jacket Mens B3 Flight Jacket Short Leather Jacket Mans Sheepskin Aviator Fur Coat",
