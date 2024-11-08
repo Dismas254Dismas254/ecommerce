@@ -19,6 +19,142 @@
 
 export const products = [
   {
+    id: "1ah",
+    image: "images/products/mower4.jpg",
+    name: "CRAFTSMAN T2200K Turn Tight 42-in 20-HP V-Twin Riding Lawn Mower",
+    desc: 'Product Dimentions: 70"D x 52"W x 43"H',
+    rating: {
+      stars: 5,
+      count: 1047
+    },
+    priceCents: 129900,
+    keywords: [
+      "mower",
+      "farm",
+      "games",
+      "devices"
+    ]
+  },
+  {
+    id: "1ag",
+    image: "images/products/mower3.jpg",
+    name: "N2000 Robot Lawn Mower ",
+    desc: 'Perimeter Wire Free RTK,TOF,Vision Robotic Lawnmower 1.5 Acres,AI-Assisted Mapping,Virtual Boundary,Multi-Zone Management,APP Control,Cut Height 0.8"-3.5",Anti-Theft',
+    rating: {
+      stars: 5,
+      count: 1047
+    },
+    priceCents: 129900,
+    keywords: [
+      "mower",
+      "farm",
+      "games",
+      "devices"
+    ]
+  },
+  {
+    id: "1af",
+    image: "images/products/mower2.jpg",
+    name: "EGO Power+ LM2135SP 21-Inch Select Cut Lawn Mower ",
+    desc: 'With Touch Drive Self-Propelled Technology 7.5Ah Battery and Rapid Charger Included',
+    rating: {
+      stars: 5,
+      count: 1047
+    },
+    priceCents: 28900,
+    keywords: [
+      "mower",
+      "farm",
+      "games",
+      "devices"
+    ]
+  },
+  {
+    id: "1ae",
+    image: "images/products/mower1.jpg",
+    name: "Robot Lawn Mower ",
+    desc: 'With Stable Boundary Wire for 1/4 Acre - 300% Higher Efficiency of Grid-Shaped Mowing Path, Automatic Robotic Lawn Cutter Mowers with Auto Mapping & Recharge, IPX6 Waterproof',
+    rating: {
+      stars: 5,
+      count: 1047
+    },
+    priceCents: 32000,
+    keywords: [
+      "mower",
+      "farm",
+      "games",
+      "devices"
+    ]
+  },
+  {
+    id: "1ad",
+    image: "images/products/ps4.jpg",
+    name: "Sony PlayStation 5 Console ",
+    desc: 'Sony PlayStation 5 Console (Disc Edition) - Japanese Import - White',
+    rating: {
+      stars: 5,
+      count: 1047
+    },
+    priceCents: 30000,
+    keywords: [
+      "ps",
+      "electronics",
+      "games",
+      "devices"
+    ]
+  },
+  {
+    id: "1ac",
+    image: "images/products/ps3.jpg",
+    name: "Logitech G Pro Racing Wheel + Pro Racing Pedal Bundle - PS5/PS4/PC",
+    desc: 'Logitech G Pro Racing Wheel + Pro Racing Pedal Bundle',
+    rating: {
+      stars: 5,
+      count: 1047
+    },
+    priceCents: 48000,
+    keywords: [
+      "ps",
+      "electronics",
+      "games",
+      "devices"
+    ]
+  },
+  {
+    id: "1ab",
+    image: "images/products/ps2.jpg",
+    name: "PlayStation 5 Pro Console",
+    desc: 'Included in box: PS5 Pro console, DualSense wireless controller, 2TB SSD, 2 Horizontal Stand Feet, HDMI cable, AC power cord, printed materials, ASTRO’s PLAYROOM (Pre-installed game)',
+    rating: {
+      stars: 5,
+      count: 1047
+    },
+    priceCents: 28000,
+    keywords: [
+      "ps",
+      "electronics",
+      "games",
+      "devices"
+    ]
+  },
+  {
+    id: "1aa",
+    image: "images/products/ps1.jpg",
+    name: "PlayStation®5 console (slim)",
+    desc: 'Model Number CFI-2000. Includes DualSense Wireless Controller, 1TB SSD, Disc Drive, 2 Horizontal Stand Feet, HDMI Cable, AC power cord, USB cable, printed materials, ASTRO’s PLAYROOM (Pre-installed game)',
+    rating: {
+      stars: 5,
+      count: 1047
+    },
+    priceCents: 18000,
+    keywords: [
+      "ps",
+      "electronics",
+      "games",
+      "devices"
+    ]
+  },
+  {
     id: "1z",
     image: "images/products/phone9.jpg",
     name: "iPhone 16 Pro | 256GB | Desert Titanium",
