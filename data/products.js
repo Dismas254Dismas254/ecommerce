@@ -19,6 +19,57 @@
 
 export const products = [
   {
+    id: "1x",
+    image: "images/products/phone7.jpg",
+    name: "Samsung Galaxy S24 Ultra 5G, Black Titanium",
+    desc: 'Features: GSM Unlocked, International Version 1TB + 12GB RAM ',
+    rating: {
+      stars: 5,
+      count: 2047
+    },
+    priceCents: 65000,
+    keywords: [
+      "phone",
+      "electronics",
+      "iphone",
+      "devices"
+    ]
+  },
+  {
+    id: "1w",
+    image: "images/products/phone6.jpg",
+    name: "Apple iPhone 16 Pro, Black Titanium",
+    desc: 'Features: 16GB RAM, 1024GB ROM, 6.3 inches, Unlocked, 5G ',
+    rating: {
+      stars: 4.5,
+      count: 1047
+    },
+    priceCents: 85000,
+    keywords: [
+      "phone",
+      "electronics",
+      "iphone",
+      "devices"
+    ]
+  },
+  {
+    id: "1v",
+    image: "images/products/phone5.jpg",
+    name: "Google Pixel 9 - Unlocked Android Smartphone ",
+    desc: 'Features: 12GB RAM, 256GB ROM, 6.3 inches, Unlocked, 5G ',
+    rating: {
+      stars: 4.5,
+      count: 1047
+    },
+    priceCents: 35000,
+    keywords: [
+      "phone",
+      "electronics",
+      "iphone",
+      "devices"
+    ]
+  },
+  {
     id: "1u",
     image: "images/products/phone4.jpg",
     name: "Google Pixel 9 Pro Fold - Unlocked Android Smartphone ",
