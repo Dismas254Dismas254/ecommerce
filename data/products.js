@@ -19,6 +19,40 @@
 
 export const products = [
   {
+    id: "1z",
+    image: "images/products/phone9.jpg",
+    name: "iPhone 16 Pro | 256GB | Desert Titanium",
+    desc: 'Features: 8GB RAM, 256GB ROM, 6.8 inches, Unlocked, 5G ,6800mAh',
+    rating: {
+      stars: 5,
+      count: 1047
+    },
+    priceCents: 70000,
+    keywords: [
+      "phone",
+      "electronics",
+      "iphone",
+      "devices"
+    ]
+  },
+  {
+    id: "1y",
+    image: "images/products/phone8.jpg",
+    name: "SAMSUNG Galaxy Z Flip 6 AI Cell Phone, Unlocked Android Smartphone",
+    desc: 'Features: 12GB RAM, 512GB ROM, 6.3 inches, Unlocked, 5G , 7000mAh',
+    rating: {
+      stars: 5,
+      count: 1047
+    },
+    priceCents: 68000,
+    keywords: [
+      "phone",
+      "electronics",
+      "iphone",
+      "devices"
+    ]
+  },
+  {
     id: "1x",
     image: "images/products/phone7.jpg",
     name: "Samsung Galaxy S24 Ultra 5G, Black Titanium",
@@ -39,7 +73,7 @@ export const products = [
     id: "1w",
     image: "images/products/phone6.jpg",
     name: "Apple iPhone 16 Pro, Black Titanium",
-    desc: 'Features: 16GB RAM, 1024GB ROM, 6.3 inches, Unlocked, 5G ',
+    desc: 'Features: 16GB RAM, 1024GB ROM, 6.9 inches, Unlocked, 5G ',
     rating: {
       stars: 4.5,
       count: 1047
