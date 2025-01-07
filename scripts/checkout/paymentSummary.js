@@ -55,13 +55,17 @@ export function renderPaymentSummary() {
         </div>
 
 
-
-                <div class="payment-summary-title">Shipping Information</div>
-        <div class="payment-summary-row">
-            <div>First Name:</div>
-            <input type="text" id="name" name="fname" required></div>
+<div class="payment-summary-row">
+    
+            <div class="payment-summary-money"></div>
         </div>
-        <div class="payment-summary-row">
+        <div class="payment-summary-row subtotal-row">
+            <div>First Name:</div>
+            <div class="payment-summary-money"><input type="text" id="city" name="fname" required></div>
+        </div>
+       
+
+          <div class="payment-summary-row">
     
             <div class="payment-summary-money"></div>
         </div>
@@ -69,6 +73,8 @@ export function renderPaymentSummary() {
             <div>Last Name:</div>
             <div class="payment-summary-money"><input type="text" id="city" name="lname" required></div>
         </div>
+
+     
         
 
 
