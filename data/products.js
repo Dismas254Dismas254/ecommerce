@@ -39,7 +39,7 @@ export const products = [
     id: "1ag",
     image: "images/products/mower3.jpg",
     name: "N2000 Robot Lawn Mower ",
-    desc: 'Perimeter Wire Free RTK,TOF,Vision Robotic Lawnmower 1.5 Acres,AI-Assisted Mapping,Virtual Boundary,Multi-Zone Management,APP Control,Cut Height 0.8"-3.5",Anti-Theft',
+    desc: 'Perimeter Wire Free RTK,TOF,Vision Robotic Lawn mower 1.5 Acres,AI-Assisted Mapping,Virtual Boundary,Multi-Zone Management,APP Control,Cut Height 0.8"-3.5",Anti-Theft',
     rating: {
       stars: 5,
       count: 1047
