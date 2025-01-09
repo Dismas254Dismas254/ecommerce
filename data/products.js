@@ -13,7 +13,7 @@ export function getProduct(productId) {
 export const products = [
   {
     id: "1ah",
-    image: ["images/products/mower4.jpg", "images/products/mower3.jpg"],
+    image: "images/products/mower4.jpg",
     name: "CRAFTSMAN T2200K Turn Tight 42-in 20-HP V-Twin Riding Lawn Mower",
     desc: 'Product Dimentions: 70"D x 52"W x 43"H',
     rating: {

@@ -10,27 +10,10 @@ function generateProductsHTML(productList) {
     .map(
       (product) => `
         <div class="product-container" data-product-id="${product.id}">
-            <div class="product-carousel">
-                <div class="carousel-images js-carousel-images-${product.id}">
-                    ${product.images
-                      .map(
-                        (image) => `
-                        <img class="product-image" src="${image}" alt="${product.name}">
-                    `
-                      )
-                      .join("")}
-                </div>
-                <div class="carousel-dots js-carousel-dots-${product.id}">
-                    ${product.images
-                      .map(
-                        (_, index) => `
-                        <div class="dot ${
-                          index === 0 ? "active" : ""
-                        }" data-index="${index}"></div>
-                    `
-                      )
-                      .join("")}
-                </div>
+            <div class="product-image-container">
+                <img class="product-image" src="${product.image}" alt="${
+        product.name
+      }">
             </div>
             <div class="product-name limit-text-to-2-lines">
                 ${product.name}
@@ -51,15 +34,16 @@ function generateProductsHTML(productList) {
             )}</div>
             <div class="product-quantity-container">
                 <select class="js-quantity-selector-${product.id}">
-                    ${[...Array(10)]
-                      .map(
-                        (_, i) => `
-                        <option value="${i + 1}" ${i === 0 ? "selected" : ""}>${
-                          i + 1
-                        }</option>
-                    `
-                      )
-                      .join("")}
+                    <option selected value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
                 </select>
             </div>
             <div class="product-spacer"></div>
@@ -77,53 +61,9 @@ function generateProductsHTML(productList) {
     .join("");
 }
 
-function initializeCarousels() {
-  products.forEach((product) => {
-    const imagesContainer = document.querySelector(
-      `.js-carousel-images-${product.id}`
-    );
-    const dots = document.querySelectorAll(
-      `.js-carousel-dots-${product.id} .dot`
-    );
-
-    let currentIndex = 0;
-
-    const updateCarousel = (index) => {
-      currentIndex = index;
-      imagesContainer.style.transform = `translateX(-${index * 100}%)`;
-      dots.forEach((dot, i) => {
-        dot.classList.toggle("active", i === index);
-      });
-    };
-
-    dots.forEach((dot, index) => {
-      dot.addEventListener("click", () => updateCarousel(index));
-    });
-
-    // Optional: Swipe functionality for mobile
-    let startX = 0;
-    imagesContainer.addEventListener("touchstart", (e) => {
-      startX = e.touches[0].clientX;
-    });
-
-    imagesContainer.addEventListener("touchend", (e) => {
-      const endX = e.changedTouches[0].clientX;
-      if (endX - startX > 50 && currentIndex > 0) {
-        updateCarousel(currentIndex - 1); // Swipe left
-      } else if (
-        startX - endX > 50 &&
-        currentIndex < product.images.length - 1
-      ) {
-        updateCarousel(currentIndex + 1); // Swipe right
-      }
-    });
-  });
-}
-
 // Display all products on page load
 document.querySelector(".js-products-grid").innerHTML =
   generateProductsHTML(products);
-initializeCarousels();
 
 // Load cart from local storage on page load
 function loadCartFromLocalStorage() {
