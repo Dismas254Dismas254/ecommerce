@@ -124,7 +124,7 @@ export function renderPaymentSummary() {
 
   const placeOrderButton = document.querySelector(".js-place-order");
   placeOrderButton.addEventListener("click", function () {
-    // Show PayPal button after the order is ready
+    // Show the PayPal button container after the order is ready
     document
       .getElementById("paypal-button-container")
       .classList.remove("hidden");
@@ -136,28 +136,83 @@ export function renderPaymentSummary() {
     renderPayPalButton();
   });
 
-  // Function to render the PayPal button
   function renderPayPalButton() {
-    paypal
-      .Buttons({
-        createOrder: function (data, actions) {
-          return actions.order.create({
-            purchase_units: [
-              {
-                amount: {
-                  value: (totalCents / 100).toFixed(2), // Dynamically set the value to order total
+    const paypalButtonContainer = document.getElementById(
+      "paypal-button-container"
+    );
+
+    // Check if fundingEligibility is defined and Venmo is available
+    if (
+      paypal.fundingEligibility &&
+      paypal.fundingEligibility[paypal.FUNDING.VENMO]
+    ) {
+      // Render the Venmo button if it's eligible
+      paypal
+        .Buttons({
+          fundingSource: paypal.FUNDING.VENMO,
+          createOrder: function (data, actions) {
+            return actions.order.create({
+              purchase_units: [
+                {
+                  amount: {
+                    value: (totalCents / 100).toFixed(2), // Dynamically set the value to order total
+                  },
                 },
-              },
-            ],
-          });
-        },
-        onApprove: function (data, actions) {
-          return actions.order.capture().then(function (details) {
-            alert("Transaction completed by " + details.payer.name.given_name);
-            // Redirect to a thank you page or update the UI accordingly
-          });
-        },
-      })
-      .render("#paypal-button-container"); // Render the PayPal button
+              ],
+            });
+          },
+          onApprove: function (data, actions) {
+            return actions.order.capture().then(function (details) {
+              alert(
+                "Transaction completed using Venmo by " +
+                  details.payer.name.given_name
+              );
+              // Redirect to a thank-you page or update the UI accordingly
+            });
+          },
+          onError: function (err) {
+            console.error("An error occurred with Venmo:", err);
+            alert(
+              "An error occurred with Venmo. Please try again or use another payment method."
+            );
+          },
+        })
+        .render("#paypal-button-container");
+    } else {
+      console.warn(
+        "Venmo is not eligible or fundingEligibility is unavailable. Rendering PayPal button instead."
+      );
+
+      // Render PayPal buttons as a fallback
+      paypal
+        .Buttons({
+          createOrder: function (data, actions) {
+            return actions.order.create({
+              purchase_units: [
+                {
+                  amount: {
+                    value: (totalCents / 100).toFixed(2), // Dynamically set the value to order total
+                  },
+                },
+              ],
+            });
+          },
+          onApprove: function (data, actions) {
+            return actions.order.capture().then(function (details) {
+              alert(
+                "Transaction completed by " + details.payer.name.given_name
+              );
+              // Redirect to a thank-you page or update the UI accordingly
+            });
+          },
+          onError: function (err) {
+            console.error("An error occurred with PayPal:", err);
+            alert(
+              "An error occurred during the transaction. Please try again."
+            );
+          },
+        })
+        .render("#paypal-button-container");
+    }
   }
 }
