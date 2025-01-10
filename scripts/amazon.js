@@ -3,6 +3,8 @@ import { products } from "../data/products.js";
 import { formatCurrency } from "./utils/money.js";
 
 let productsHTML = "";
+let currency = "USD"; // Default to USD
+let currencySymbol = "$"; // Default symbol
 
 // Function to generate product list HTML
 function generateProductsHTML(productList) {
@@ -29,9 +31,9 @@ function generateProductsHTML(productList) {
                     ${product.rating.count}
                 </div>
             </div>
-            <div class="product-price">$${(product.priceCents / 100).toFixed(
-              2
-            )}</div>
+            <div class="product-price">${currencySymbol}${convertPrice(
+        product.priceCents / 100
+      ).toFixed(2)}</div>
             <div class="product-quantity-container">
                 <select class="js-quantity-selector-${product.id}">
                     <option selected value="1">1</option>
@@ -113,7 +115,54 @@ function addCartButtonListeners() {
   });
 }
 
-// Call the load function on page load
+// Currency conversion logic
+function convertPrice(priceInUSD) {
+  const conversionRates = {
+    USD: 1,
+    CAD: 1.35,
+    INR: 75.0,
+    GBP: 0.75,
+    KES: 0.25,
+    // Add more conversion rates as needed
+  };
+
+  return priceInUSD * (conversionRates[currency] || 1); // Default to USD if unknown currency
+}
+
+// Function to update currency based on user's location
+function updateCurrency() {
+  fetch("https://ipinfo.io?token=cb762e630b9759")
+    .then((response) => response.json())
+    .then((data) => {
+      const country = data.country;
+      const countryCurrencyMap = {
+        US: "USD",
+        CA: "CAD",
+        IN: "INR",
+        GB: "GBP",
+        KE: "KES",
+        // Add more countries and their corresponding currencies
+      };
+      currency = countryCurrencyMap[country] || "USD"; // Default to USD if unknown
+      currencySymbol =
+        currency === "USD"
+          ? "$"
+          : currency === "KES"
+          ? "KES"
+          : currency === "INR"
+          ? "₹"
+          : "$";
+
+      // After currency update, regenerate the product list with updated prices
+      document.querySelector(".js-products-grid").innerHTML =
+        generateProductsHTML(products);
+      addCartButtonListeners(); // Re-add listeners for newly displayed products
+    })
+    .catch((err) => console.error("Currency Fetch Error: ", err));
+}
+
+// Initialize currency and load cart data
+updateCurrency();
 loadCartFromLocalStorage();
 addCartButtonListeners(); // Add listeners for initially loaded products
 
