@@ -2,7 +2,6 @@ import { cart, addToCart } from "../data/cart.js";
 import { products } from "../data/products.js";
 import { formatCurrency } from "./utils/money.js";
 
-let productsHTML = "";
 let currency = "USD"; // Default to USD
 let currencySymbol = "$"; // Default symbol
 
@@ -177,6 +176,7 @@ function updateCurrency() {
 document.addEventListener("DOMContentLoaded", () => {
   updateCurrency();
   loadCartFromLocalStorage();
+  loadProducts(); // Load products after currency is set
   addCartButtonListeners(); // Add listeners for initially loaded products
 });
 
@@ -200,9 +200,11 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
     // Regenerate productsHTML based on filtered products
-    document.querySelector(".js-products-grid").innerHTML =
-      generateProductsHTML(filteredProducts);
-    addCartButtonListeners(); // Re-add listeners for newly displayed products
+    const productsGrid = document.querySelector(".js-products-grid");
+    if (productsGrid) {
+      productsGrid.innerHTML = generateProductsHTML(filteredProducts);
+      addCartButtonListeners(); // Re-add listeners for newly displayed products
+    }
   }
 
   // Event listener for search input (for "Enter" key or button click)
