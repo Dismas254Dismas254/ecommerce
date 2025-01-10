@@ -63,9 +63,16 @@ function generateProductsHTML(productList) {
     .join("");
 }
 
-// Display all products on page load
-document.querySelector(".js-products-grid").innerHTML =
-  generateProductsHTML(products);
+// Function to load products into the DOM
+function loadProducts() {
+  const productsGrid = document.querySelector(".js-products-grid");
+  if (productsGrid) {
+    productsGrid.innerHTML = generateProductsHTML(products);
+    addCartButtonListeners(); // Add listeners for initially loaded products
+  } else {
+    console.error("Products grid element not found");
+  }
+}
 
 // Load cart from local storage on page load
 function loadCartFromLocalStorage() {
@@ -85,7 +92,12 @@ function updateCartQuantity() {
     cartQuantity += cartItem.quantity;
   });
 
-  document.querySelector(".js-cart-quantity").innerHTML = cartQuantity;
+  const cartQuantityElement = document.querySelector(".js-cart-quantity");
+  if (cartQuantityElement) {
+    cartQuantityElement.innerHTML = cartQuantity;
+  } else {
+    console.error("Cart quantity element not found");
+  }
 
   // Save the cart data to local storage
   localStorage.setItem("cart", JSON.stringify(cart));
@@ -103,12 +115,14 @@ function addCartButtonListeners() {
       );
 
       // Show the "Added to Cart" message
-      addedMessage.style.opacity = 1;
+      if (addedMessage) {
+        addedMessage.style.opacity = 1;
 
-      // Fade out the message after 1.5 seconds
-      setTimeout(() => {
-        addedMessage.style.opacity = 0;
-      }, 1500);
+        // Fade out the message after 1.5 seconds
+        setTimeout(() => {
+          addedMessage.style.opacity = 0;
+        }, 1500);
+      }
 
       updateCartQuantity();
     });
@@ -154,17 +168,17 @@ function updateCurrency() {
           : "$";
 
       // After currency update, regenerate the product list with updated prices
-      document.querySelector(".js-products-grid").innerHTML =
-        generateProductsHTML(products);
-      addCartButtonListeners(); // Re-add listeners for newly displayed products
+      loadProducts();
     })
     .catch((err) => console.error("Currency Fetch Error: ", err));
 }
 
 // Initialize currency and load cart data
-updateCurrency();
-loadCartFromLocalStorage();
-addCartButtonListeners(); // Add listeners for initially loaded products
+document.addEventListener("DOMContentLoaded", () => {
+  updateCurrency();
+  loadCartFromLocalStorage();
+  addCartButtonListeners(); // Add listeners for initially loaded products
+});
 
 // Search functionality
 document.addEventListener("DOMContentLoaded", () => {
