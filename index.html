@@ -39,7 +39,15 @@
     </div>
 
     <div class="main">
-      <div class="products-grid js-products-grid"></div>
+      <!-- Example Product with data-usd-price -->
+      <div class="product">
+        <h2>Product 1</h2>
+        <p class="product-price" data-usd-price="100">Price: $100</p>
+      </div>
+      <div class="product">
+        <h2>Product 2</h2>
+        <p class="product-price" data-usd-price="50">Price: $50</p>
+      </div>
     </div>
 
     <script type="module" src="scripts/amazon.js"></script>
@@ -86,8 +94,14 @@
         // Update the displayed currency on the page (e.g., product prices, cart, etc.)
         document.querySelectorAll(".product-price").forEach((priceElement) => {
           const priceInUSD = parseFloat(priceElement.dataset.usdPrice);
-          const convertedPrice = convertPrice(priceInUSD, currency); // Convert to local currency
-          priceElement.innerText = `${symbol}${convertedPrice.toFixed(2)}`;
+          if (!isNaN(priceInUSD)) {
+            const convertedPrice = convertPrice(priceInUSD, currency); // Convert to local currency
+            priceElement.innerText = `Price: ${symbol}${convertedPrice.toFixed(
+              2
+            )}`;
+          } else {
+            console.error("Invalid USD price data.");
+          }
         });
       }
 
