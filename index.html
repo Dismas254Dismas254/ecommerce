@@ -1,36 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SWIPT SHOPPING</title>
-
-    <!-- This code is needed for responsive design to work.
-      (Responsive design = make the website look good on
-      smaller screen sizes like a phone or a tablet). -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- Load a font called Roboto from Google Fonts. -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Here are the CSS files for this page. -->
     <link rel="stylesheet" href="styles/shared/general.css" />
     <link rel="stylesheet" href="styles/shared/amazon-header.css" />
     <link rel="stylesheet" href="styles/pages/amazon.css" />
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
   </head>
   <body>
+    <!-- Header content -->
     <div class="amazon-header">
       <div class="amazon-header-left-section">
         <a href="index.html" class="header-link">
           <img class="amazon-logo" src="images/amazon-logo-white-nobg.png" />
-          <img
-            class="amazon-mobile-logo"
-            src="images/amazon-logo-white-nobg.png"
-          />
         </a>
       </div>
 
@@ -39,14 +23,8 @@
           class="js-search-bar search-bar"
           type="text"
           placeholder="Search"
-          value=""
-          data-testid="search-input"
         />
-
-        <button
-          class="js-search-button search-button"
-          data-testid="search-button"
-        >
+        <button class="js-search-button search-button">
           <img class="search-icon" src="images/icons/search-icon.png" />
         </button>
       </div>
@@ -63,7 +41,69 @@
     <div class="main">
       <div class="products-grid js-products-grid"></div>
     </div>
-  </body>
 
-  <script type="module" src="scripts/amazon.js"></script>
+    <script type="module" src="scripts/amazon.js"></script>
+    <script>
+      let currency = "USD"; // Default currency is USD
+      let currencySymbol = "$"; // Default currency symbol
+
+      // Fetch the user's location and currency based on IP
+      fetch("https://ipinfo.io?token=cb762e630b9759") // Replace with your API key
+        .then((response) => response.json())
+        .then((data) => {
+          const country = data.country; // Get country code (e.g., US, CA, etc.)
+          console.log("Detected Country: " + country);
+
+          // You can use the country to find currency codes
+          fetch(`https://api.exchangerate-api.com/v4/latest/USD`)
+            .then((response) => response.json())
+            .then((rateData) => {
+              // Get the currency for the detected country (for simplicity, using a map of country to currency)
+              const countryCurrencyMap = {
+                US: "USD",
+                CA: "CAD",
+                IN: "INR",
+                GB: "GBP",
+                KE: "KES",
+                // Add more countries and their corresponding currencies
+              };
+              currency = countryCurrencyMap[country] || "USD"; // Default to USD if unknown
+              currencySymbol =
+                currency === "USD"
+                  ? "$"
+                  : currency === "KES"
+                  ? "KES"
+                  : currency === "INR"
+                  ? "₹"
+                  : "$";
+
+              updateCurrencyDisplay(currency, currencySymbol);
+            })
+            .catch((err) => console.error("Currency Fetch Error: ", err));
+        });
+
+      function updateCurrencyDisplay(currency, symbol) {
+        // Update the displayed currency on the page (e.g., product prices, cart, etc.)
+        document.querySelectorAll(".product-price").forEach((priceElement) => {
+          const priceInUSD = parseFloat(priceElement.dataset.usdPrice);
+          const convertedPrice = convertPrice(priceInUSD, currency); // Convert to local currency
+          priceElement.innerText = `${symbol}${convertedPrice.toFixed(2)}`;
+        });
+      }
+
+      function convertPrice(priceInUSD, currency) {
+        // Example function to convert USD to local currency, you can integrate a currency API
+        const conversionRates = {
+          USD: 1,
+          CAD: 1.35,
+          INR: 75.0,
+          GBP: 0.75,
+          KES: 0,
+          // Add conversion rates as needed
+        };
+
+        return priceInUSD * (conversionRates[currency] || 1); // Default to USD if unknown currency
+      }
+    </script>
+  </body>
 </html>
