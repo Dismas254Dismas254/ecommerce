@@ -2,8 +2,7 @@ import { cart, addToCart } from "../data/cart.js";
 import { products } from "../data/products.js";
 import { formatCurrency } from "./utils/money.js";
 
-let currency = "USD"; // Default to USD
-let currencySymbol = "$"; // Default symbol
+let productsHTML = "";
 
 // Function to generate product list HTML
 function generateProductsHTML(productList) {
@@ -30,9 +29,9 @@ function generateProductsHTML(productList) {
                     ${product.rating.count}
                 </div>
             </div>
-            <div class="product-price">${currencySymbol}${convertPrice(
-        product.priceCents / 100
-      ).toFixed(2)}</div>
+            <div class="product-price">$${(product.priceCents / 100).toFixed(
+              2
+            )}</div>
             <div class="product-quantity-container">
                 <select class="js-quantity-selector-${product.id}">
                     <option selected value="1">1</option>
@@ -62,16 +61,9 @@ function generateProductsHTML(productList) {
     .join("");
 }
 
-// Function to load products into the DOM
-function loadProducts() {
-  const productsGrid = document.querySelector(".js-products-grid");
-  if (productsGrid) {
-    productsGrid.innerHTML = generateProductsHTML(products);
-    addCartButtonListeners(); // Add listeners for initially loaded products
-  } else {
-    console.error("Products grid element not found");
-  }
-}
+// Display all products on page load
+document.querySelector(".js-products-grid").innerHTML =
+  generateProductsHTML(products);
 
 // Load cart from local storage on page load
 function loadCartFromLocalStorage() {
@@ -91,12 +83,7 @@ function updateCartQuantity() {
     cartQuantity += cartItem.quantity;
   });
 
-  const cartQuantityElement = document.querySelector(".js-cart-quantity");
-  if (cartQuantityElement) {
-    cartQuantityElement.innerHTML = cartQuantity;
-  } else {
-    console.error("Cart quantity element not found");
-  }
+  document.querySelector(".js-cart-quantity").innerHTML = cartQuantity;
 
   // Save the cart data to local storage
   localStorage.setItem("cart", JSON.stringify(cart));
@@ -114,71 +101,21 @@ function addCartButtonListeners() {
       );
 
       // Show the "Added to Cart" message
-      if (addedMessage) {
-        addedMessage.style.opacity = 1;
+      addedMessage.style.opacity = 1;
 
-        // Fade out the message after 1.5 seconds
-        setTimeout(() => {
-          addedMessage.style.opacity = 0;
-        }, 1500);
-      }
+      // Fade out the message after 1.5 seconds
+      setTimeout(() => {
+        addedMessage.style.opacity = 0;
+      }, 1500);
 
       updateCartQuantity();
     });
   });
 }
 
-// Currency conversion logic
-function convertPrice(priceInUSD) {
-  const conversionRates = {
-    USD: 1,
-    CAD: 1.35,
-    INR: 75.0,
-    GBP: 0.75,
-    KES: 0.25,
-    // Add more conversion rates as needed
-  };
-
-  return priceInUSD * (conversionRates[currency] || 1); // Default to USD if unknown currency
-}
-
-// Function to update currency based on user's location
-function updateCurrency() {
-  fetch("https://ipinfo.io?token=cb762e630b9759")
-    .then((response) => response.json())
-    .then((data) => {
-      const country = data.country;
-      const countryCurrencyMap = {
-        US: "USD",
-        CA: "CAD",
-        IN: "INR",
-        GB: "GBP",
-        KE: "KES",
-        // Add more countries and their corresponding currencies
-      };
-      currency = countryCurrencyMap[country] || "USD"; // Default to USD if unknown
-      currencySymbol =
-        currency === "USD"
-          ? "$"
-          : currency === "KES"
-          ? "KES"
-          : currency === "INR"
-          ? "₹"
-          : "$";
-
-      // After currency update, regenerate the product list with updated prices
-      loadProducts();
-    })
-    .catch((err) => console.error("Currency Fetch Error: ", err));
-}
-
-// Initialize currency and load cart data
-document.addEventListener("DOMContentLoaded", () => {
-  updateCurrency();
-  loadCartFromLocalStorage();
-  loadProducts(); // Load products after currency is set
-  addCartButtonListeners(); // Add listeners for initially loaded products
-});
+// Call the load function on page load
+loadCartFromLocalStorage();
+addCartButtonListeners(); // Add listeners for initially loaded products
 
 // Search functionality
 document.addEventListener("DOMContentLoaded", () => {
@@ -200,11 +137,9 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
     // Regenerate productsHTML based on filtered products
-    const productsGrid = document.querySelector(".js-products-grid");
-    if (productsGrid) {
-      productsGrid.innerHTML = generateProductsHTML(filteredProducts);
-      addCartButtonListeners(); // Re-add listeners for newly displayed products
-    }
+    document.querySelector(".js-products-grid").innerHTML =
+      generateProductsHTML(filteredProducts);
+    addCartButtonListeners(); // Re-add listeners for newly displayed products
   }
 
   // Event listener for search input (for "Enter" key or button click)
