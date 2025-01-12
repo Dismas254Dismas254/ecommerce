@@ -55,6 +55,9 @@ export function renderPaymentSummary() {
         </div>
 
 
+        <div class="payment-summary-title">Shipping Information</div>
+
+
 <div class="payment-summary-row">
     
             <div class="payment-summary-money"></div>
