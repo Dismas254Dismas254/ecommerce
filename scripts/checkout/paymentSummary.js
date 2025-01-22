@@ -57,8 +57,8 @@ export function renderPaymentSummary() {
         <div class="payment-summary-title">Shipping Information</div>
         <button 
           onclick="toggleShippingInfo()" 
-          style="background: none; border: none; color: blue; text-decoration: underline; cursor: pointer;">
-          Toggle Shipping Information
+          style="background: none; border: none; color: blue; text-decoration: underline; cursor: pointer;font-weight: bold;">
+          Add Shipping Information
         </button>
         <div id="shipping-info" style="display: none;">
           <div class="payment-summary-row subtotal-row">
