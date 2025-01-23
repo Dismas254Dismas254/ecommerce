@@ -12,6 +12,102 @@ export function getProduct(productId) {
 
 export const products = [
   {
+    id: "1ao",
+    image: "images/products/toy8.jpg",
+    name: "Toddler Scooters for Boys and Girls ",
+    desc: " Primo – Durable, Valuable and Timeless Design Kids Ride on Toys for 2 Year Old - 3-4 - 5 Year Olds, Collectors and Design Lovers",
+    rating: {
+      stars: 5,
+      count: 2047,
+    },
+    priceCents: 14500,
+    keywords: ["toy", "car", "kids", "children"],
+  },
+  {
+    id: "1an",
+    image: "images/products/toy7.jpg",
+    name: "24V 2-Seater 2WD Off-Road Buggy",
+    desc: "CAN-AM style Ride On Toy Car with Remote Control SXS UTV Kids Electric Vehicle, EVA Tires Wheels, Music Play, police car",
+    rating: {
+      stars: 4.5,
+      count: 2047,
+    },
+    priceCents: 31500,
+    keywords: ["toy", "car", "kids", "children"],
+  },
+  {
+    id: "1am",
+    image: "images/products/toy6.jpg",
+    name: "Huffy Bicycle Company Kids",
+    desc: "Battery-Powered Ride On Car Special Ops w/Lights, Sounds & MP3 Player",
+    rating: {
+      stars: 4.5,
+      count: 2047,
+    },
+    priceCents: 31000,
+    keywords: ["toy", "car", "kids", "children"],
+  },
+  {
+    id: "1al",
+    image: "images/products/toy5.jpg",
+    name: "Bentley Trike, All Terrain Toddler Bike 6-in-1",
+    desc: "Baby to Big Kid Tricycle is a Compelling Statement of Performance & Luxury, Fuschia Pink (6m-5y+)",
+    rating: {
+      stars: 5,
+      count: 1047,
+    },
+    priceCents: 22000,
+    keywords: ["toy", "bike", "kids", "children"],
+  },
+  {
+    id: "1al",
+    image: "images/products/toy4.jpg",
+    name: "Razor Rambler 16 – 36V Electric Minibike with Retro Style",
+    desc: "Up to 15.5 MPH, Up to 11.5 Miles Range & Pocket Mod Petite - 12V Miniature Euro-Style Electric Scooter for Ages 7+",
+    rating: {
+      stars: 4.5,
+      count: 3047,
+    },
+    priceCents: 13900,
+    keywords: ["toy", "bike", "kids", "children"],
+  },
+  {
+    id: "1ak",
+    image: "images/products/toy3.jpg",
+    name: "JAMARA Ride-on Lamborghini Aventador SVJ Rouge 12V 2.4GHz",
+    desc: "Product Dimensions	42.52 x 24.8 x 16.54 inches",
+    rating: {
+      stars: 5,
+      count: 1047,
+    },
+    priceCents: 35000,
+    keywords: ["toy", "car", "kids", "children"],
+  },
+  {
+    id: "1aj",
+    image: "images/products/toy2.jpg",
+    name: "Hansa Toys True-to-Life Unicorn Ride-on",
+    desc: "Individually handcrafted, highly realistic plush,Ride-on capabilities.",
+    rating: {
+      stars: 5,
+      count: 1047,
+    },
+    priceCents: 25000,
+    keywords: ["toy", "horse", "kids", "children"],
+  },
+  {
+    id: "1ai",
+    image: "images/products/toy1.jpg",
+    name: "Crawler Hydraulic Mini Excavator - Ride-On Tracked Digger with Enclosed Cab",
+    desc: "The mini excavator excels as a ride on excavator, ideal for various tasks including digging, drilling, and bull-dozing in gardens, farms, parks, and construction sites.",
+    rating: {
+      stars: 4.5,
+      count: 2047,
+    },
+    priceCents: 499000,
+    keywords: ["excavator", "toy", "games", "devices"],
+  },
+  {
     id: "1ah",
     image: "images/products/mower4.jpg",
     name: "CRAFTSMAN T2200K Turn Tight 42-in 20-HP V-Twin Riding Lawn Mower",
