@@ -81,7 +81,7 @@ export function renderPaymentSummary() {
     <div>State:</div>
     <div class="payment-summary-money">
         <select name="state" required>
-            <option value="" disabled selected>Select a state</option>
+            <option value="" disabled selected>State</option>
             <option value="AL">Alabama</option>
             <option value="AK">Alaska</option>
             <option value="AZ">Arizona</option>
@@ -137,10 +137,14 @@ export function renderPaymentSummary() {
 </div>
 
           <div class="payment-summary-row subtotal-row">
-              <div>Phone:</div>
-              <div class="payment-summary-money"><input type="text" name="phone" required></div>
+                <div>Zip Code:</div>
+      <div class="payment-summary-money"><input type="text" name="zip" required></div>
+  </div>
           </div>
         </div>
+
+
+        
 
         <button class="place-order-button button-primary js-place-order">
             Place your order
