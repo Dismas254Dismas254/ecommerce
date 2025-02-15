@@ -12,6 +12,102 @@ export function getProduct(productId) {
 
 export const products = [
   {
+    id: "1aw",
+    image: "images/products/carpart8.jpg",
+    name: "Auto Spare Car Parts Electronic Power Steering Rack Gear 7L8422062G ",
+    desc: "Compatible For Audi Q7 (4LB) 2006-2015. Brand: SDETASOQ",
+    rating: {
+      stars: 5,
+      count: 4047,
+    },
+    priceCents: 136800,
+    keywords: ["car", "spareparts", "power", "automotive", "steering"],
+  },
+  {
+    id: "1av",
+    image: "images/products/carpart7.jpg",
+    name: "Car Spare Parts Control Arm Front Drift Angle Lock Kit ",
+    desc: "Compatible With Nissan S13/S14/S15 180SX 240 SX YZ613",
+    rating: {
+      stars: 5,
+      count: 2047,
+    },
+    priceCents: 231900,
+    keywords: ["car", "spareparts", "lock", "automotive"],
+  },
+  {
+    id: "1au",
+    image: "images/products/carpart6.jpg",
+    name: "F10 M5 Carbon Fiber Car Spare Parts Engine Hood Bonnet ",
+    desc: "Compatible For Bmw 5 SERIES F10 F18 Gts",
+    rating: {
+      stars: 4.5,
+      count: 1047,
+    },
+    priceCents: 157000,
+    keywords: ["car", "spareparts", "bonnet", "automotive"],
+  },
+  {
+    id: "1at",
+    image: "images/products/carpart5.jpg",
+    name: "Bosch Automotive Tools 3824-08OHW ESI[Truck] Off-Highway 1-Year Software License ",
+    desc: " For Agricultural, Construction, and Industrial Vehicles",
+    rating: {
+      stars: 5,
+      count: 2047,
+    },
+    priceCents: 72600,
+    keywords: ["car", "spareparts", "license", "automotive"],
+  },
+  {
+    id: "1as",
+    image: "images/products/carpart4.jpg",
+    name: "PANGOLIN 6M60 Engine Rebuild Kit",
+    desc: "For Mitsubishi Fuso 6M60 Engine Equipment Truck Spare Parts",
+    rating: {
+      stars: 5,
+      count: 4047,
+    },
+    priceCents: 135900,
+    keywords: ["car", "spareparts", "engine", "automotive"],
+  },
+  {
+    id: "1ar",
+    image: "images/products/carpart3.jpg",
+    name: "Car Spare Parts Original Front Bumper LR156794 LR156796 Compatible for Evoque",
+    desc: " Car Spare Parts Original Front Bumper LR156794 LR156796 Compatible for Evoque",
+    rating: {
+      stars: 5,
+      count: 4047,
+    },
+    priceCents: 85000,
+    keywords: ["car", "spareparts", "bumber", "automotive"],
+  },
+  {
+    id: "1aq",
+    image: "images/products/carpart2.jpg",
+    name: "Car Spare Parts Forged Wheel Hub",
+    desc: " Compatible for Mercedes Compatible for BMW Compatible for Maybach Metris Vito V-Class 5 Hole Wheel Rim(Four Wheels_21IN.)",
+    rating: {
+      stars: 4.5,
+      count: 1047,
+    },
+    priceCents: 160000,
+    keywords: ["car", "spareparts", "tyres", "automotive"],
+  },
+  {
+    id: "1ap",
+    image: "images/products/carpart1.jpg",
+    name: "Auto Spare Car Parts Engine Intake Manifold 03H133201AE",
+    desc: " Compatible For Touareg Magotan Teramont Atlas 3.6L",
+    rating: {
+      stars: 5,
+      count: 2047,
+    },
+    priceCents: 128300,
+    keywords: ["car", "spareparts", "tank", "automotive"],
+  },
+  {
     id: "1ao",
     image: "images/products/toy8.jpg",
     name: "Toddler Scooters for Boys and Girls ",
