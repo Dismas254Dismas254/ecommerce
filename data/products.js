@@ -11,6 +11,30 @@ export function getProduct(productId) {
 }
 
 export const products = [
+      {
+    id: "1ay",
+    image: "images/products/bedding3.jpg",
+    name: "Provence Stone Comforter Bedding Ensemble by J Queen (Cal King 4 Piece Comforter Set 110W x 96L)",
+    desc: "Included Components	Pillow Sham, Comforter ,Color	Brown,Style	Elegant,Brand	J. Queen New York,Theme	Medallion",
+    rating: {
+      stars: 4.5,
+      count: 3049,
+    },
+    priceCents: 19100,
+    keywords: ["bedding", "sheets", "bed", "pillow", "sleep"],
+  },
+    {
+    id: "1ax",
+    image: "images/products/bedding1.jpg",
+    name: "Touch of Class Camelot Luxury Bedding ",
+    desc: "Matte Satin Damask on Richly Textured Jacquard-Woven Chenille | 7 Piece Set Includes King Comforter, Bedskirt, 2 King Shams, and 3 Decorative Pillows",
+    rating: {
+      stars: 4.5,
+      count: 7049,
+    },
+    priceCents: 20900,
+    keywords: ["bedding", "sheets", "bed", "pillow", "sleep"],
+  },
   {
     id: "1aw",
     image: "images/products/carpart8.jpg",
