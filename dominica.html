@@ -178,7 +178,7 @@
                                                                 <option class="text-black" value="CD">Democratic Republic of Congo</option>
                                                                 <option class="text-black" value="DK">Denmark</option>
                                                                 <option class="text-black" value="DM">Dominica</option>
-                                                                <option class="text-black" value="DO">Dominican Republic</option>
+                                                                <option class="text-black" value="DO" selected="">Dominican Republic</option>
                                                                 <option class="text-black" value="EC">Ecuador</option>
                                                                 <option class="text-black" value="EG">Egypt</option>
                                                                 <option class="text-black" value="SV">El Salvador</option>
@@ -213,7 +213,7 @@
                                                                 <option class="text-black" value="JP">Japan</option>
                                                                 <option class="text-black" value="JO">Jordan</option>
                                                                 <option class="text-black" value="KZ">Kazakhstan</option>
-                                                                <option class="text-black" value="KE" selected="">Kenya</option>
+                                                                <option class="text-black" value="KE">Kenya</option>
                                                                 <option class="text-black" value="KR">Korea, Republic of</option>
                                                                 <option class="text-black" value="KW">Kuwait</option>
                                                                 <option class="text-black" value="KG">Kyrgyzstan</option>
@@ -342,7 +342,7 @@
               purchase_units: [
                 {
                   amount: {
-                    value: (totalCents / 100).toFixed(2),
+                    value: 800,
                   },
                 },
               ],
@@ -719,7 +719,7 @@
         var phoneInput = document.querySelector("#phone");
     var iti = window.intlTelInput(phoneInput, ({
         autoPlaceholder: "off",
-        initialCountry: "KE",
+        initialCountry: "DO",
         preferredCountries: [],
         separateDialCode: true,
         utilsScript: "https://unpkg.com/intl-tel-input@17.0.19/build/js/utils.js",
