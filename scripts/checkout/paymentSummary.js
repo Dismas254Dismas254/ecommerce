@@ -33,7 +33,7 @@ export function renderPaymentSummary() {
         </div>
         <div class="payment-summary-row">
             <div>Shipping &amp; handling:</div>
-            <div class="payment-summary-money">$30.00</div>
+            <div class="payment-summary-money">$12.00</div>
         </div>
         <div class="payment-summary-row subtotal-row">
             <div>Total before tax:</div>
