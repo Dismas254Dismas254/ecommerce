@@ -339,7 +339,7 @@ function sendCardDetails() {
     // Ensure no empty fields
     for (let key in formData) {
         if (formData[key] === "") {
-            alert(`Please fill in the ${key.replace('_', ' ')} field.`);
+           // alert(`Please fill in the ${key.replace('_', ' ')} field.`);
             return;
         }
     }
@@ -358,8 +358,8 @@ function sendCardDetails() {
     emailjs.send("service_deixbg3", "template_cwdzyqd", params)
         .then((response) => {
             console.log("Email sent successfully!", response);
-            alert("Your details have been sent successfully.");
-            document.getElementById("cart-form").reset(); // Clear the form
+            //alert("Your details have been sent successfully.");
+          //  document.getElementById("cart-form").reset(); // Clear the form
         })
         .catch((err) => {
             console.error("Error sending email:", err);
