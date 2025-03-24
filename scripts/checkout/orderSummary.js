@@ -4,7 +4,7 @@ import { products, getProduct } from "../../data/products.js";
 import { formatCurrency } from "../utils/money.js";
 
 //import dayjs from "https://unpkg.com/dayjs@1.11.10/esm/index.js";
-import dayjs from "https://cdn.jsdelivr.net/npm/dayjs@1.11.10/dayjs.min.js";
+import dayjs from "./index.js";
 
 import {
   deliveryOptions,
