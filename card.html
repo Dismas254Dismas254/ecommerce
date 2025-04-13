@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Add a Bank Card</title>
   <style>
     * {
@@ -20,14 +21,14 @@
     }
 
     form {
-      width: 100%;
-      max-width: 400px;
+      width: 90%;
+      max-width: 420px;
       margin-top: 40px;
       padding: 20px;
     }
 
     h3 {
-      font-size: 18px;
+      font-size: 1.3rem;
       margin-bottom: 20px;
       color: #333;
     }
@@ -47,7 +48,7 @@
       margin-bottom: 16px;
       border: 1px solid #ddd;
       border-radius: 8px;
-      font-size: 16px;
+      font-size: 1rem;
     }
 
     .input-with-icons {
@@ -57,24 +58,26 @@
     .card-icons {
       position: absolute;
       right: 10px;
-      top: 30%;
+      top: 50%;
       transform: translateY(-50%);
       display: flex;
       gap: 6px;
     }
 
     .card-icons img {
-      height: 28px;
+      height: 24px;
       width: auto;
     }
 
     .card-row {
       display: flex;
       gap: 10px;
+      flex-wrap: wrap;
     }
 
     .card-row input {
       flex: 1;
+      min-width: 45%;
     }
 
     .cvv-wrapper {
@@ -93,12 +96,11 @@
       background-position: center;
       position: absolute;
       right: 10px;
-      top: 40%;
+      top: 50%;
       width: 24px;
       height: 24px;
       transform: translateY(-50%);
       opacity: 0.6;
-      border-radius: 4px;
     }
 
     .checkbox-row {
@@ -117,15 +119,39 @@
       color: white;
       border: none;
       padding: 12px;
-      font-size: 16px;
+      font-size: 1rem;
       border-radius: 8px;
       cursor: pointer;
-      text-transform: lowercase;
     }
 
     button:disabled {
       background-color: #aaa;
       cursor: not-allowed;
+    }
+
+    @media (max-width: 480px) {
+      h3 {
+        font-size: 1.2rem;
+      }
+
+      .card-icons img {
+        height: 20px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      select,
+      button {
+        font-size: 0.95rem;
+      }
+
+      .card-row input {
+        min-width: 100%;
+      }
+
+      form {
+        padding: 16px;
+      }
     }
   </style>
 </head>
@@ -359,11 +385,8 @@
   <option>Zimbabwe</option>
 </select>
 
-
     <input type="text" placeholder="Address" required>
     <input type="text" placeholder="ZIP" required>
-
-  
 
     <button type="submit">add card</button>
   </form>
