@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Paxful Payment</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Roboto, sans-serif;
+    }
+
+    body {
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 420px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .logo {
+      height: 22px;
+    }
+
+    .language {
+      border: none;
+      background: transparent;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      padding: 24px 20px;
+      text-align: center;
+    }
+
+    .title {
+      font-size: 15px;
+      font-weight: 600;
+      color: #333;
+      text-align: left;
+      margin-bottom: 20px;
+    }
+
+    .bitcoin-icon {
+      font-size: 32px;
+      color: #f7931a;
+      margin-bottom: 10px;
+    }
+
+    .incoming-text {
+      font-size: 15px;
+      color: #333;
+      margin-bottom: 8px;
+    }
+
+    .btc-amount {
+      color: #00AEEF;
+      font-weight: 600;
+      font-size: 20px;
+      margin-bottom: 6px;
+    }
+
+    .usd-amount {
+      color: #333;
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+
+    .receiver {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .avatar {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .name {
+      font-weight: 500;
+      color: #8bc34a;
+      font-size: 15px;
+    }
+
+    .auth-warning {
+      background-color: #fff8d9;
+      color: #664d03;
+      border: 1px solid #ffe58f;
+      border-radius: 6px;
+      font-size: 13px;
+      padding: 10px;
+      text-align: left;
+      margin-bottom: 20px;
+    }
+
+    .auth-warning span {
+      font-weight: bold;
+      margin-right: 6px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .accept {
+      background-color: #d6f15c;
+      color: #000;
+      font-weight: 600;
+      border: none;
+      padding: 12px;
+      font-size: 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .accept:hover {
+      background-color: #c5e94f;
+    }
+
+    .cancel {
+      background-color: #ffffff;
+      color: #333;
+      border: 1px solid #ccc;
+      padding: 12px;
+      font-size: 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .cancel:hover {
+      background-color: #f7f7f7;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="https://seeklogo.com/images/P/paxful-logo-F79F422FA8-seeklogo.com.png" alt="Paxful" class="logo" />
+      <select class="language">
+        <option selected>English (en-US)</option>
+      </select>
+    </header>
+
+    <div class="card">
+      <div class="title">Receive Bitcoin</div>
+      <div class="bitcoin-icon">₿</div>
+      <p class="incoming-text">Incoming Paxful Payment.</p>
+      <p class="btc-amount">+ 0.01171885 BTC</p>
+      <p class="usd-amount">+ 1,000.00 USD</p>
+
+      <div class="receiver">
+        <img src="https://i.imgur.com/2yaf2wb.png" alt="Avatar" class="avatar" />
+        <span class="name">Rogaro</span>
+      </div>
+
+      <div class="auth-warning">
+        <span>!</span> Authentication is necessary to accept payments.
+      </div>
+
+      <div class="buttons">
+        <button class="accept">Accept Funds</button>
+        <button class="cancel">Cancel</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
